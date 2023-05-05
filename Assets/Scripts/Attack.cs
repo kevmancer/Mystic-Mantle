@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public float preDelay;
     public float duration;
     public int damage;
     public bool hasDuration;
@@ -11,7 +12,7 @@ public class Attack : MonoBehaviour
     public float cooldown;
     private BoxCollider2D attackCollider;
     private SpriteRenderer attackRenderer;
-    public bool attackExecuting;
+    public bool attackExecuting,attackOnCooldown;
     private List<GameObject> objectsInRangeOfAttack;
    
     // Start is called before the first frame update
@@ -21,7 +22,12 @@ public class Attack : MonoBehaviour
         attackRenderer = gameObject.GetComponent<SpriteRenderer>();
         attackRenderer.enabled = false;
         attackExecuting = false;
+        attackOnCooldown = false;
         objectsInRangeOfAttack = new List<GameObject>();
+        if (cooldown < preDelay + duration)
+        {
+            cooldown = preDelay + duration;
+        }
     }
 
     // Update is called once per frame
@@ -35,7 +41,11 @@ public class Attack : MonoBehaviour
         if ((isFromPlayer&&collision.gameObject.CompareTag("Enemy"))||(!isFromPlayer && collision.gameObject.CompareTag("Player")))
         {
             objectsInRangeOfAttack.Add(collision.gameObject);
-            
+            if (attackExecuting)
+            {
+                Entity entity = collision.gameObject.transform.parent.gameObject.GetComponent<Entity>();
+                entity.DamageEntity(damage);
+            }
         }
     }
 
@@ -50,20 +60,27 @@ public class Attack : MonoBehaviour
 
     public void ExecuteAttack()
     {
-        if (!attackExecuting)
+        if (!attackExecuting&&!attackOnCooldown)
         {
-            foreach(GameObject objectToAttack in objectsInRangeOfAttack)
-            {
-                Entity entity = objectToAttack.transform.parent.gameObject.GetComponent<Entity>();
-                entity.DamageEntity(damage);
-            }
-            attackRenderer.enabled = true;
-            attackExecuting = true;
-            if (hasDuration)
-            {
-                StartCoroutine(AttackDuration());
-                StartCoroutine(AttackCooldown());
-            }
+            attackOnCooldown = true;
+            StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackPreDelay());
+        }
+    }
+
+    IEnumerator AttackPreDelay()
+    {
+        yield return new WaitForSeconds(preDelay);
+        attackRenderer.enabled = true;
+        attackExecuting = true;
+        foreach (GameObject objectToAttack in objectsInRangeOfAttack)
+        {
+            Entity entity = objectToAttack.transform.parent.gameObject.GetComponent<Entity>();
+            entity.DamageEntity(damage);
+        }
+        if (hasDuration)
+        {
+            StartCoroutine(AttackDuration());
         }
     }
 
@@ -71,12 +88,13 @@ public class Attack : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         attackRenderer.enabled = false;
+        attackExecuting = false;
     }
 
     IEnumerator AttackCooldown()
     {
         yield return new WaitForSeconds(cooldown);
-        attackExecuting = false;
+        attackOnCooldown = false;
     }
 
 }

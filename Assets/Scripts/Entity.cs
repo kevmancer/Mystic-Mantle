@@ -23,6 +23,8 @@ public class Entity : MonoBehaviour
 
     public void DamageEntity(int damage)
     {
+        Animator animator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        animator.SetTrigger("damage");
         currentHealth -= damage;
         if (currentHealth < 0)
         {

@@ -293,12 +293,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb2c352f34c8e4a9e2e3c15a60f8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preDelay: 0
   duration: 0.25
   damage: 30
   hasDuration: 1
   isFromPlayer: 1
   cooldown: 1
   attackExecuting: 0
+  attackOnCooldown: 0
 --- !u!1 &3473153282510683515
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3473153283000630912}
   - component: {fileID: 3473153283000630915}
+  - component: {fileID: 693877482}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -584,6 +587,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &693877482
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473153283000630913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16bc3e95d24f865439e2162c704bfbe8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3473153283146800909
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,9 +843,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb2c352f34c8e4a9e2e3c15a60f8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preDelay: 0
   duration: 0.15
   damage: 10
   hasDuration: 1
   isFromPlayer: 1
   cooldown: 0.2
   attackExecuting: 0
+  attackOnCooldown: 0
