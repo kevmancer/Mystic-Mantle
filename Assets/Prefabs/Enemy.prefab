@@ -295,12 +295,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 0
   duration: 0.25
-  damage: 30
+  damage: 10
   hasDuration: 1
-  isFromPlayer: 1
+  isFromPlayer: 0
   cooldown: 1
-  attackExecuting: 0
   attackOnCooldown: 0
+  attackDamaging: 0
+  knockBack: 20
 --- !u!1 &3473153282510683515
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc62b3ce388fe184399e7d5517282e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   jumpForce: 800
 --- !u!114 &3814367544826828909
 MonoBehaviour:
@@ -502,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  attackExecuting: 0
 --- !u!1 &3473153283000630913
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,9 +847,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 0
   duration: 0.15
-  damage: 10
+  damage: 5
   hasDuration: 1
-  isFromPlayer: 1
+  isFromPlayer: 0
   cooldown: 0.2
-  attackExecuting: 0
   attackOnCooldown: 0
+  attackDamaging: 0
+  knockBack: 10

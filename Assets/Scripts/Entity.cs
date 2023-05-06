@@ -7,12 +7,17 @@ public class Entity : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
+    public bool attackExecuting;
+    private Rigidbody2D entityRb;
+    private EntityControl entityControl;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        attackExecuting = false;
+        entityRb = gameObject.GetComponent<Rigidbody2D>();
+        entityControl = gameObject.GetComponent<EntityControl>();
     }
 
     // Update is called once per frame
@@ -21,9 +26,10 @@ public class Entity : MonoBehaviour
         
     }
 
-    public void DamageEntity(int damage)
+    public void DamageEntity(int damage, float knockBack, bool isAttackFromLeft)
     {
         Animator animator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        entityControl.KnockBack(knockBack, isAttackFromLeft);
         animator.SetTrigger("damage");
         currentHealth -= damage;
         if (currentHealth < 0)
