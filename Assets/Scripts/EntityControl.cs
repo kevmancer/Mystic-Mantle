@@ -9,27 +9,43 @@ public class EntityControl : MonoBehaviour
     public float jumpForce = 30;
     protected bool isOnGround = false;
     protected SpriteRenderer characterSprite;
-    protected GameObject lightAttackObject, heavyAttackObject;
+    protected GameObject abilityParent;
+    protected List<GameObject> attackObjects = new List<GameObject>();
     public bool isLookingLeft = true;
     protected bool jump = false;
     protected bool moveLeft = false;
     protected bool moveRight = false;
-    protected Attack lightAttack;
-    protected Attack heavyAttack;
+    public List<Attack> attacks = new List<Attack>();
     protected Rigidbody2D entitytRb;
+    protected Entity entity;
+    protected Vector3 knockBackVector = Vector3.zero;
+    protected bool knockBack = false;
 
     // Start is called before the first frame update
-    protected void Start()
+    protected virtual void Start()
     {
         characterSprite = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
-        lightAttackObject = gameObject.transform.GetChild(5).gameObject;
-        heavyAttackObject = gameObject.transform.GetChild(6).gameObject;
-        lightAttack = lightAttackObject.gameObject.GetComponent<Attack>();
-        heavyAttack = heavyAttackObject.gameObject.GetComponent<Attack>();
+        SetAttacks();
+        entity = gameObject.GetComponent<Entity>();
         entitytRb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    protected void FixedUpdate()
+    protected virtual void SetAttacks()
+    {
+        abilityParent = gameObject.transform.GetChild(5).gameObject;
+        attackObjects.Clear();
+        attacks.Clear();
+        foreach (Transform child in abilityParent.transform)
+        {
+            if (child.gameObject.GetComponent<BackShield>() == null)
+            {
+                attackObjects.Add(child.gameObject);
+                attacks.Add(child.gameObject.GetComponent<Attack>());
+            }
+        }
+    }
+
+    protected virtual void FixedUpdate()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (moveLeft)
@@ -47,26 +63,45 @@ public class EntityControl : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce);
             jump = false;
         }
+        if (knockBack)
+        {
+            entitytRb.AddForce(knockBackVector, ForceMode2D.Impulse);
+            knockBack = false;
+        }
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
-        
+        if (entity.isAlive)
+        {
+            MovementUpdate();
+        }
+    }
+
+    protected virtual void MovementUpdate()
+    {
+
     }
 
     protected void MoveLeft()
     {
         moveLeft = true;
-        isLookingLeft = true;
-        SetEntityOrientation();
+        if (!isLookingLeft)
+        {
+            isLookingLeft = true;
+            OnOrientationChanged();
+        }
     }
 
     protected void MoveRight()
     {
         moveRight = true;
-        isLookingLeft = false;
-        SetEntityOrientation();
+        if (isLookingLeft)
+        {
+            isLookingLeft = false;
+            OnOrientationChanged();
+        }
     }
 
     protected void Jump()
@@ -82,7 +117,7 @@ public class EntityControl : MonoBehaviour
     {
         //    if (!punchAttack.attackExecuting && !kickAttack.attackExecuting)
         //   {
-        lightAttack.ExecuteAttack();
+        attacks[0].ExecuteAbility();
         //  }
     }
 
@@ -90,22 +125,40 @@ public class EntityControl : MonoBehaviour
     {
         //    if (!punchAttack.attackExecuting && !kickAttack.attackExecuting)
         //    {
-        heavyAttack.ExecuteAttack();
+        attacks[1].ExecuteAbility();
         //   }
     }
 
-    protected void SetEntityOrientation()
+    protected void UltimateAttack()
+    {
+        if (attacks.Count == 3)
+        {
+            attacks[2].ExecuteAbility();
+        }
+    }
+
+    protected void RandomAttack(List<int> attacksThatHitIndexes)
+    {
+        int random = UnityEngine.Random.Range(0, attacksThatHitIndexes.Count - 1);
+        attacks[attacksThatHitIndexes[random]].ExecuteAbility();
+    }
+
+    protected virtual void OnOrientationChanged()
     {
         if (isLookingLeft)
         {
-            lightAttackObject.transform.localPosition = new Vector3(-Math.Abs(lightAttackObject.transform.localPosition.x), lightAttackObject.transform.localPosition.y, lightAttackObject.transform.localPosition.z);
-            heavyAttackObject.transform.localPosition = new Vector3(-Math.Abs(heavyAttackObject.transform.localPosition.x), heavyAttackObject.transform.localPosition.y, heavyAttackObject.transform.localPosition.z);
+            foreach (GameObject attackObject in attackObjects)
+            {
+                attackObject.transform.localPosition = new Vector3(-Math.Abs(attackObject.transform.localPosition.x), attackObject.transform.localPosition.y, attackObject.transform.localPosition.z);
+            }
             characterSprite.flipX = false;
         }
         else
         {
-            lightAttackObject.transform.localPosition = new Vector3(Math.Abs(lightAttackObject.transform.localPosition.x), lightAttackObject.transform.localPosition.y, lightAttackObject.transform.localPosition.z);
-            heavyAttackObject.transform.localPosition = new Vector3(Math.Abs(heavyAttackObject.transform.localPosition.x), heavyAttackObject.transform.localPosition.y, heavyAttackObject.transform.localPosition.z);
+            foreach (GameObject attackObject in attackObjects)
+            {
+                attackObject.transform.localPosition = new Vector3(Math.Abs(attackObject.transform.localPosition.x), attackObject.transform.localPosition.y, attackObject.transform.localPosition.z);
+            }
             characterSprite.flipX = true;
         }
     }
@@ -116,15 +169,24 @@ public class EntityControl : MonoBehaviour
         {
             isOnGround = true;
         }
+        if(collision.gameObject.layer == 3)
+        {
+            Entity collisionEntity = collision.gameObject.GetComponent<Entity>();
+            if (!collisionEntity.isAlive)
+            {
+                Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
+            }
+        }
     }
 
-    public void KnockBack(float knockBack, bool isAttackFromLeft)
+    public void KnockBack(float knockBackAmount, bool isAttackFromLeft)
     {
-        Vector3 knockBackDirection = new Vector3(2, 1, 0);
+        knockBackVector = new Vector3(2, 1, 0);
         if (isAttackFromLeft)
         {
-            knockBackDirection.x = -knockBackDirection.x;
+            knockBackVector.x = -knockBackVector.x;
         }
-        entitytRb.AddForce(knockBackDirection.normalized * knockBack, ForceMode2D.Impulse);
+        knockBackVector *= knockBackAmount;
+        knockBack = true;
     }
 }

@@ -2,104 +2,106 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class Attack : Ability
 {
-    public float preDelay;
-    public float duration;
     public int damage;
-    public bool hasDuration;
-    public bool isFromPlayer;
-    public float cooldown;
-    private SpriteRenderer attackRenderer;
-    public bool attackOnCooldown, attackDamaging;
-    private List<GameObject> objectsInRangeOfAttack;
+    public List<GameObject> objectsInRangeOfAttack;
+    private GameObject parentObject;
     private Entity parentEntity;
-    private EntityControl parentEntityControl;
     public float knockBack;
    
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        attackRenderer = gameObject.GetComponent<SpriteRenderer>();
-        parentEntity = gameObject.transform.parent.gameObject.GetComponent<Entity>();
-        parentEntityControl = gameObject.transform.parent.gameObject.GetComponent<EntityControl>();
-        attackRenderer.enabled = false;
-        attackOnCooldown = false;
-        attackDamaging = false;
+        base.Start();
+        parentObject = gameObject.transform.parent.gameObject.transform.parent.gameObject;
+        parentEntity = parentObject.GetComponent<Entity>();
         objectsInRangeOfAttack = new List<GameObject>();
-        if (cooldown < preDelay + duration)
-        {
-            cooldown = preDelay + duration;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((isFromPlayer&&collision.gameObject.CompareTag("Enemy"))||(!isFromPlayer && collision.gameObject.CompareTag("Player")))
+        if ((gameObject.transform.parent.gameObject.transform.parent.gameObject.CompareTag("Player")&&collision.gameObject.CompareTag("Enemy"))||(!gameObject.transform.parent.gameObject.transform.parent.gameObject.CompareTag("Player") && collision.gameObject.CompareTag("Player")))
         {
             objectsInRangeOfAttack.Add(collision.gameObject);
-            if (attackDamaging)
+            if (isExecuting)
             {
-                Entity entity = collision.gameObject.transform.parent.gameObject.GetComponent<Entity>();
-                entity.DamageEntity(damage, knockBack, parentEntityControl.isLookingLeft);
+                AttackHit(collision.gameObject);
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if ((isFromPlayer && collision.gameObject.CompareTag("Enemy")) || (!isFromPlayer && collision.gameObject.CompareTag("Player")))
+        if ((gameObject.transform.parent.gameObject.transform.parent.gameObject.CompareTag("Player") && collision.gameObject.CompareTag("Enemy")) || (!gameObject.transform.parent.gameObject.transform.parent.gameObject.CompareTag("Player") && collision.gameObject.CompareTag("Player")))
         {
             objectsInRangeOfAttack.Remove(collision.gameObject);
 
         }
     }
 
-    public void ExecuteAttack()
+    public override void ExecuteAbility()
     {
-        if (!parentEntity.attackExecuting&&!attackOnCooldown)
+        if (!parentEntity.attackExecuting)
         {
-            parentEntity.attackExecuting = true;
-            attackOnCooldown = true;
-            StartCoroutine(AttackCooldown());
-            StartCoroutine(AttackPreDelay());
+            base.ExecuteAbility();
         }
     }
 
-    IEnumerator AttackPreDelay()
+    public void AttackHit(GameObject objectToAttack)
     {
-        yield return new WaitForSeconds(preDelay);
-        attackRenderer.enabled = true;
-        attackDamaging = true;
+        GameObject attackedObject = objectToAttack.transform.parent.gameObject;
+        Entity entity = objectToAttack.transform.parent.gameObject.GetComponent<Entity>();
+        bool isKnockBackLeft = parentObject.transform.position.x > attackedObject.transform.position.x;
+        if (IsAttackDeflected(objectToAttack,isKnockBackLeft))
+        {
+            entity.DamageEntity(0, knockBack, isKnockBackLeft);
+        }
+        else
+        {
+            entity.DamageEntity(damage, knockBack, isKnockBackLeft);
+        }
+    }
+
+    private bool IsAttackDeflected(GameObject objectToAttack, bool isAttackFromRight)
+    {
+        if (objectToAttack.CompareTag("Player"))
+        {
+            BackShield backShield = objectToAttack.transform.parent.gameObject.transform.GetChild(5).gameObject.transform.GetChild(3).GetComponent<BackShield>();
+            PlayerControl playerControl = objectToAttack.transform.parent.gameObject.GetComponent<PlayerControl>();
+            if (backShield.isExecuting)
+            {
+                if ((playerControl.isLookingLeft && isAttackFromRight) || (!playerControl.isLookingLeft && !isAttackFromRight))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    protected override void OnStartExecuting()
+    {
         foreach (GameObject objectToAttack in objectsInRangeOfAttack)
         {
-            Entity entity = objectToAttack.transform.parent.gameObject.GetComponent<Entity>();
-            entity.DamageEntity(damage, knockBack, parentEntityControl.isLookingLeft);
-        }
-        if (hasDuration)
-        {
-            StartCoroutine(AttackDuration());
+            AttackHit(objectToAttack);
         }
     }
 
-    IEnumerator AttackDuration()
+    protected override void OnStopExecuting()
     {
-        yield return new WaitForSeconds(duration);
-        attackRenderer.enabled = false;
-        attackDamaging = false;
         parentEntity.attackExecuting = false;
-    }
-
-    IEnumerator AttackCooldown()
-    {
-        yield return new WaitForSeconds(cooldown);
-        attackOnCooldown = false;
     }
 
 }

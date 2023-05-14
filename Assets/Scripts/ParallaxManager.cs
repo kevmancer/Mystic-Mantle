@@ -13,6 +13,8 @@ public class ParallaxManager : MonoBehaviour
     private Thread receiveThread;
     private UdpClient client;
     private int port;
+    private Queue<Vector3> posHistory=new Queue<Vector3>();
+    public int smoothingAmount = 1;
     public Vector3 facePosition { get; private set; } = new Vector3(0, 0, 0);
     public string sendText = "empty_string";
 
@@ -66,6 +68,8 @@ public class ParallaxManager : MonoBehaviour
 
                 facePosition = new Vector3(float.Parse(text.Split(',')[0]), float.Parse(text.Split(',')[1]), float.Parse(text.Split(',')[2]));
 
+                AddToPosHistory(facePosition);
+
                 if (sendText != string.Empty)
                 {
                     print("sent" + sendText);
@@ -79,6 +83,33 @@ public class ParallaxManager : MonoBehaviour
                 print(e.ToString());
             }
         }
+    }
+
+    void AddToPosHistory(Vector3 newPos)
+    {
+        if (posHistory.Count < smoothingAmount)
+        {
+            posHistory.Enqueue(newPos);
+        }
+        else
+        {
+            posHistory.Enqueue(newPos);
+            posHistory.Dequeue();
+        }
+    }
+
+    public Vector3 GetSmoothedPos()
+    {
+        Vector3 average = Vector3.zero;
+        foreach (Vector3 vector in posHistory)
+        {
+            average += vector;
+        }
+        if (posHistory.Count > 0)
+        {
+            average /= posHistory.Count;
+        }
+        return average;
     }
 
 }

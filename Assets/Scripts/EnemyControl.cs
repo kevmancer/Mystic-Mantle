@@ -5,48 +5,50 @@ using System;
 
 public class EnemyControl : EntityControl
 {
-    private GameObject player;
+    private GameObject playerObject;
+    private Entity player;
 
     // Start is called before the first frame update
-    new void Start()
+    protected override void Start()
     {
         base.Start();
-        player = GameObject.Find("Player").gameObject;
+        playerObject = GameObject.Find("Player").gameObject;
+        player = playerObject.GetComponent<Entity>();
     }
 
-    new void Update()
+    protected override void MovementUpdate()
     {
-        base.Update();
-        float towardsPlayerDirection = (player.transform.position.x - transform.position.x);
-        if (Math.Abs(towardsPlayerDirection) > 1)
+        base.MovementUpdate();
+        if (player.isAlive&& entity.isAlive)
         {
-            if (towardsPlayerDirection > 0)
+            List<int> attacksThatHitIndexes = new List<int>();
+            int i = 0;
+            foreach (Attack attack in attacks)
             {
-                MoveRight();
+                if (attack.objectsInRangeOfAttack.Count > 0)
+                {
+                    attacksThatHitIndexes.Add(i);
+                }
+                i++;
             }
-            else if (towardsPlayerDirection < 0)
+            if (attacksThatHitIndexes.Count == 0)
             {
-                MoveLeft();
+                float towardsPlayerDirection = (playerObject.transform.position.x - transform.position.x);
+                if (towardsPlayerDirection > 0)
+                {
+                    MoveRight();
+                }
+                else if (towardsPlayerDirection < 0)
+                {
+                    MoveLeft();
+                }
             }
-        }
-        else
-        {
-            RandomAttack();
+            else
+            {
+                RandomAttack(attacksThatHitIndexes);
+            }
         }
         
-    }
-
-    private void RandomAttack()
-    {
-        int random = UnityEngine.Random.Range(0, 2);
-        if (random == 0)
-        {
-            heavyAttack.ExecuteAttack();
-        }
-        else
-        {
-            lightAttack.ExecuteAttack();
-        }
     }
 
 }

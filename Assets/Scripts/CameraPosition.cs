@@ -19,25 +19,25 @@ public class CameraPosition : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (parallaxManager.facePosition.z == 0)
+        if (parallaxManager.GetSmoothedPos().z == 0)
         {
-            transform.position = new Vector3(parallaxManager.facePosition.x * Constants.sizeFactor / 100, -parallaxManager.facePosition.y * Constants.sizeFactor / 100, -20.264f);
+            transform.position = new Vector3(parallaxManager.GetSmoothedPos().x * Constants.sizeFactor / 100, -parallaxManager.GetSmoothedPos().y * Constants.sizeFactor / 100, -20.264f);
         }
         else
         {
-            transform.position = new Vector3(parallaxManager.facePosition.x * Constants.sizeFactor / 100, -parallaxManager.facePosition.y * Constants.sizeFactor / 100, -parallaxManager.facePosition.z * Constants.sizeFactor / 100);
+            transform.position = new Vector3(parallaxManager.GetSmoothedPos().x * Constants.sizeFactor / 100, -parallaxManager.GetSmoothedPos().y * Constants.sizeFactor / 100, -parallaxManager.GetSmoothedPos().z * Constants.sizeFactor / 100);
         }
         
-        if(parallaxManager.facePosition.z == 0)
+        if(parallaxManager.GetSmoothedPos().z == 0)
         {
             cameraComp.focalLength = 20264;
         }
         else
         {
-            cameraComp.focalLength = Math.Abs(parallaxManager.facePosition.z * Constants.sizeFactor * 10); 
+            cameraComp.focalLength = Math.Abs(parallaxManager.GetSmoothedPos().z * Constants.sizeFactor * 10); 
         }
         var sensorSize = cameraComp.sensorSize;
-        cameraComp.lensShift = new Vector2((-parallaxManager.facePosition.x * Constants.sizeFactor / sensorSize.x) * 10, (parallaxManager.facePosition.y * Constants.sizeFactor / sensorSize.y) * 10);
+        cameraComp.lensShift = new Vector2((-parallaxManager.GetSmoothedPos().x * Constants.sizeFactor / sensorSize.x) * 10, (parallaxManager.GetSmoothedPos().y * Constants.sizeFactor / sensorSize.y) * 10);
     }
 
 }

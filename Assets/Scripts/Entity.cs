@@ -7,58 +7,68 @@ public class Entity : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public float damageReduction = 0;
     public bool attackExecuting;
-    private Rigidbody2D entityRb;
-    private EntityControl entityControl;
+    protected Rigidbody2D entityRb;
+    protected EntityControl entityControl;
+    public bool isAlive;
+    public Animator animator;
+    protected Collider2D entityCollider;
+    protected bool isShielded;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
+        isAlive = true;
         currentHealth = maxHealth;
         attackExecuting = false;
+        isShielded = false;
         entityRb = gameObject.GetComponent<Rigidbody2D>();
         entityControl = gameObject.GetComponent<EntityControl>();
+        animator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        entityCollider = gameObject.transform.GetChild(1).GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         
     }
 
     public void DamageEntity(int damage, float knockBack, bool isAttackFromLeft)
     {
-        Animator animator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
-        entityControl.KnockBack(knockBack, isAttackFromLeft);
-        animator.SetTrigger("damage");
-        currentHealth -= damage;
-        if (currentHealth < 0)
+        if (isAlive)
         {
-            currentHealth = 0;
-        }
-        if (currentHealth == 0)
-        {
-            EntityDeath();
+            entityControl.KnockBack(knockBack, isAttackFromLeft);
+            animator.SetTrigger("damage");
+            currentHealth -= (int)((float)damage*(1F-damageReduction));
+            if (currentHealth < 0)
+            {
+                currentHealth = 0;
+            }
+            if (currentHealth == 0)
+            {
+                EntityDeath();
+            }
         }
     }
 
     public void HealEntity(int heal)
     {
-        currentHealth += heal;
-        if (currentHealth > maxHealth)
+        if (isAlive)
         {
-            currentHealth = maxHealth;
+            currentHealth += heal;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
         }
     }
 
-    private void EntityDeath()
+    protected virtual void EntityDeath()
     {
-        StartCoroutine(DestroyAfterDeath());
+        isAlive = false;
+        animator.SetTrigger("death");
     }
-
-    IEnumerator DestroyAfterDeath()
-    {
-        yield return new WaitForEndOfFrame();
-        Destroy(gameObject);
-    }
+    
 }
