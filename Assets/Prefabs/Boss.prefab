@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,12 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 2
   duration: 1
-  damage: 100
-  hasDuration: 1
-  isFromPlayer: 0
   cooldown: 10
-  attackOnCooldown: 0
-  attackDamaging: 0
+  isExecuting: 0
+  isOnCooldown: 0
+  isImmobilizing: 0
+  damage: 100
   objectsInRangeOfAttack: []
   knockBack: 20
 --- !u!58 &5790448
@@ -203,7 +202,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 250
   currentHealth: 250
-  attackExecuting: 0
+  damageReduction: 0
+  attackPreOrExecuting: 0
   isAlive: 0
   animator: {fileID: 0}
 --- !u!1 &1314192042547565468
@@ -408,7 +408,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,8 +481,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314192042594202128}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -493,7 +493,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f63a39f50fa8a364c9d43bace51f59e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -626,7 +626,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -672,12 +672,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 0.5
   duration: 1
-  damage: 30
-  hasDuration: 1
-  isFromPlayer: 0
   cooldown: 2
-  attackOnCooldown: 0
-  attackDamaging: 0
+  isExecuting: 0
+  isOnCooldown: 0
+  isImmobilizing: 0
+  damage: 30
   objectsInRangeOfAttack: []
   knockBack: 20
 --- !u!1 &1314192043252794609
@@ -759,7 +758,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -871,7 +870,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -917,12 +916,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 0.5
   duration: 1
-  damage: 40
-  hasDuration: 1
-  isFromPlayer: 0
   cooldown: 3
-  attackOnCooldown: 0
-  attackDamaging: 0
+  isExecuting: 0
+  isOnCooldown: 0
+  isImmobilizing: 0
+  damage: 40
   objectsInRangeOfAttack: []
   knockBack: 20
 --- !u!1 &1314192043474339844
