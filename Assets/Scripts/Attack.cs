@@ -42,7 +42,7 @@ public class Attack : Ability
 
     public override void ExecuteAbility()
     {
-        if (!parentEntity.attackExecuting)
+        if (!parentEntity.attackPreOrExecuting)
         {
             base.ExecuteAbility();
         }
@@ -90,9 +90,16 @@ public class Attack : Ability
             return false;
         }
     }
-    
+
+    protected override void OnPreExecuting()
+    {
+        base.OnPreExecuting();
+        parentEntity.attackPreOrExecuting = true;
+    }
+
     protected override void OnStartExecuting()
     {
+        base.OnStartExecuting();
         foreach (GameObject objectToAttack in objectsInRangeOfAttack)
         {
             AttackHit(objectToAttack);
@@ -101,7 +108,8 @@ public class Attack : Ability
 
     protected override void OnStopExecuting()
     {
-        parentEntity.attackExecuting = false;
+        base.OnStopExecuting();
+        parentEntity.attackPreOrExecuting = false;
     }
 
 }

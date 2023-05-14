@@ -9,6 +9,8 @@ public class PowerUp : MonoBehaviour
     public int maxHealth = 150;
     public float damageReduction = 0.3F;
     public GameObject attacksPrefab;
+    public Color playerTint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class PowerUp : MonoBehaviour
         {
             PlayerControl playerControl = collision.gameObject.transform.parent.gameObject.GetComponent<PlayerControl>();
             Player playerEntity = collision.gameObject.transform.parent.gameObject.GetComponent<Player>();
-            playerControl.AquiredPowerUp(speed, jumpForce, attacksPrefab);
+            playerControl.AquiredPowerUp(speed, jumpForce, attacksPrefab, playerTint);
             playerEntity.AquiredPowerUp(maxHealth, damageReduction);
             Destroy(gameObject);
         }

@@ -9,6 +9,7 @@ public class Ability : MonoBehaviour
     public float cooldown;
     public bool isExecuting;
     public bool isOnCooldown;
+    public bool isImmobilizing;
     private SpriteRenderer abilityRenderer;
     // Start is called before the first frame update
     protected virtual void Start()
@@ -33,7 +34,7 @@ public class Ability : MonoBehaviour
     {
         if (!isOnCooldown&&!isExecuting)
         {
-            isOnCooldown = true;
+            OnPreExecuting();
             StartCoroutine(AbilityCooldown());
             StartCoroutine(AbilityPreDelay());
         }
@@ -46,6 +47,11 @@ public class Ability : MonoBehaviour
         isExecuting = true;
         OnStartExecuting();
         StartCoroutine(AbilityDuration());
+    }
+
+    protected virtual void OnPreExecuting()
+    {
+        isOnCooldown = true;
     }
 
     protected virtual void OnStartExecuting()

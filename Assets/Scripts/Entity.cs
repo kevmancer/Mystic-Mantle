@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public float damageReduction = 0;
-    public bool attackExecuting;
+    public bool attackPreOrExecuting;
     protected Rigidbody2D entityRb;
     protected EntityControl entityControl;
     public bool isAlive;
@@ -21,7 +21,7 @@ public class Entity : MonoBehaviour
     {
         isAlive = true;
         currentHealth = maxHealth;
-        attackExecuting = false;
+        attackPreOrExecuting = false;
         isShielded = false;
         entityRb = gameObject.GetComponent<Rigidbody2D>();
         entityControl = gameObject.GetComponent<EntityControl>();

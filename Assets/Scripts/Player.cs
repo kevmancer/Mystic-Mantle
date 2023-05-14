@@ -8,7 +8,6 @@ public class Player : Entity
     protected override void EntityDeath()
     {
         base.EntityDeath();
-
     }
 
     public void AquiredPowerUp(int newMaxHealth, float newDamageReduction)

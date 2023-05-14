@@ -63,11 +63,11 @@ public class PlayerControl: EntityControl
         backShield = backShiledObject.GetComponent<BackShield>();
     }
 
-    public void AquiredPowerUp(float newSpeed, float newJumpForce, GameObject newAttacksPrefab)
+    public void AquiredPowerUp(float newSpeed, float newJumpForce, GameObject newAttacksPrefab, Color playerTint)
     {
         speed = newSpeed;
         jumpForce = newJumpForce;
-        characterSprite.color = new Color(0, 255, 0);
+        characterSprite.color = playerTint;
         StartCoroutine(ReplaceAttacks(newAttacksPrefab));
     }
 
@@ -77,7 +77,12 @@ public class PlayerControl: EntityControl
         GameObject newAttacksObject = Instantiate(newAttacksPrefab, abilityParent.transform.position, abilityParent.transform.rotation) as GameObject;
         newAttacksObject.transform.parent = gameObject.transform;
         DestroyImmediate(abilityParent);
-        SetAttacks();
+        SetAbilities();
+    }
+
+    protected override void SetAbilities()
+    {
+        base.SetAbilities();
         SetBackShield();
     }
 

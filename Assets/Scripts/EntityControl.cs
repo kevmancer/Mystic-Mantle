@@ -20,17 +20,18 @@ public class EntityControl : MonoBehaviour
     protected Entity entity;
     protected Vector3 knockBackVector = Vector3.zero;
     protected bool knockBack = false;
+    protected bool disableMovement = false;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
         characterSprite = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
-        SetAttacks();
+        SetAbilities();
         entity = gameObject.GetComponent<Entity>();
         entitytRb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    protected virtual void SetAttacks()
+    protected virtual void SetAbilities()
     {
         abilityParent = gameObject.transform.GetChild(5).gameObject;
         attackObjects.Clear();
@@ -47,7 +48,6 @@ public class EntityControl : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (moveLeft)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
@@ -60,11 +60,13 @@ public class EntityControl : MonoBehaviour
         }
         if (jump)
         {
-            rb.AddForce(Vector3.up * jumpForce);
+            entitytRb.velocity = Vector3.zero;
+            entitytRb.AddForce(Vector3.up * jumpForce);
             jump = false;
         }
         if (knockBack)
         {
+            entitytRb.velocity = Vector3.zero;
             entitytRb.AddForce(knockBackVector, ForceMode2D.Impulse);
             knockBack = false;
         }
