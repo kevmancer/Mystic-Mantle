@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372654073273855784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.222, y: 0, z: 0}
-  m_LocalScale: {x: 0.39999998, y: 1.8, z: 1}
+  m_LocalPosition: {x: -0.594, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7399362826200683351}
@@ -41,24 +41,24 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372654073273855784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00901226, y: 0.0009959638}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.11, y: 0.27}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.11259191, y: 0.27595377}
   m_EdgeRadius: 0
 --- !u!212 &1436501113765552719
 SpriteRenderer:
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f63a39f50fa8a364c9d43bace51f59e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,8 +101,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.9623866, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8e0519149b62d4a44a19655c46137ea9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,6 +130,11 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx: []
+  hitSoundFx: []
+  blockSoundFx: []
+  execSoundFx:
+  - {fileID: 8300000, guid: f96c4d3bf183245429ac26f4ecb52b3e, type: 3}
 --- !u!1 &4113717445591417972
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,8 +198,8 @@ Transform:
   m_GameObject: {fileID: 4827689662633638041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7399362826200683351}
   m_RootOrder: 2
@@ -257,7 +262,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -284,10 +289,19 @@ MonoBehaviour:
   cooldown: 5
   isExecuting: 0
   isOnCooldown: 0
-  isImmobilizing: 0
+  isImmobilizing: 1
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx: []
+  execSoundFx: []
   damage: 50
   objectsInRangeOfAttack: []
-  knockBack: 50
+  knockBack: 10
 --- !u!1 &5373814052611028598
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,8 +329,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373814052611028598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.54, y: 0.05, z: 0}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0.759, y: 0.05, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7399362826200683351}
@@ -335,18 +349,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0062398985, y: -0.0010512639}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.01, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.17, y: 0.08}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16591056, y: 0.08499661}
   m_EdgeRadius: 0
 --- !u!212 &5373814052611028596
 SpriteRenderer:
@@ -368,7 +382,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f63a39f50fa8a364c9d43bace51f59e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -389,8 +403,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 001f51251afb4ce4280222aac9944d34, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -418,9 +432,19 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 10
   objectsInRangeOfAttack: []
-  knockBack: 10
+  knockBack: 5
 --- !u!1 &5373814052980045087
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,8 +472,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373814052980045087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.52, y: -0.434, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0.78, y: -0.434, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7399362826200683351}
@@ -468,18 +492,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005733013, y: 0.00007929653}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.18, y: 0.13}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.17597282, y: 0.13335766}
   m_EdgeRadius: 0
 --- !u!212 &5373814052980045085
 SpriteRenderer:
@@ -501,7 +525,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f63a39f50fa8a364c9d43bace51f59e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -522,7 +546,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef519d8b8f6d7cc41b8e872703d186e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -551,6 +575,16 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 30
   objectsInRangeOfAttack: []
-  knockBack: 15
+  knockBack: 7

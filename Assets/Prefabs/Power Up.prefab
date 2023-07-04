@@ -51,7 +51,9 @@ MonoBehaviour:
   maxHealth: 150
   damageReduction: 0.3
   attacksPrefab: {fileID: 8799762417585742455, guid: 485c35121fd002644a2b03f1ed9b5250, type: 3}
-  playerTint: {r: 1, g: 0.9441444, b: 0.33490568, a: 1}
+  playerPowerUpSprite: {fileID: 21300000, guid: 6c1ec289090d5f044b58f82049e49c05, type: 3}
+  spawnsBoss: 0
+  bossPrefab: {fileID: 0}
 --- !u!61 &2783973601669381485
 BoxCollider2D:
   m_ObjectHideFlags: 0

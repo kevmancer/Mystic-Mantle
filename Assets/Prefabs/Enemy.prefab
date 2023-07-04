@@ -196,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3473153281783653876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53, y: -0.43, z: 0}
+  m_LocalPosition: {x: 0.53, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,9 +299,19 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 10
   objectsInRangeOfAttack: []
-  knockBack: 10
+  knockBack: 7
 --- !u!1 &3473153282510683515
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,8 +498,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 800
-  isLookingLeft: 1
-  attacks: []
+  isLookingRight: 1
+  abilities: []
+  disableMovement: 0
+  detectionDistance: 10
 --- !u!114 &5693723489675199573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,8 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f93d9e1aefb7f0418cb4d3c41ea05d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
   damageReduction: 0
   attackPreOrExecuting: 0
   isAlive: 0
@@ -752,7 +764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3473153283226543773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.52, y: 0.03, z: 0}
+  m_LocalPosition: {x: 0.52, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -849,12 +861,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb2c352f34c8e4a9e2e3c15a60f8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preDelay: 0
+  preDelay: 0.4
   duration: 0.15
   cooldown: 0.2
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 5
   objectsInRangeOfAttack: []
   knockBack: 5

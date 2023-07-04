@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5790446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 0.1}
+  m_LocalScale: {x: 15, y: 15, z: 0.1875}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7127808223310752240}
@@ -100,13 +100,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preDelay: 2
   duration: 1
-  cooldown: 10
+  cooldown: 13
   isExecuting: 0
   isOnCooldown: 0
-  isImmobilizing: 0
-  damage: 100
+  isImmobilizing: 1
+  isCancelled: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
+  damage: 110
   objectsInRangeOfAttack: []
-  knockBack: 20
+  knockBack: 30
 --- !u!58 &5790448
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -307,10 +318,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc62b3ce388fe184399e7d5517282e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   jumpForce: 1000
-  isLookingLeft: 1
-  attacks: []
+  isLookingRight: 1
+  abilities: []
+  disableMovement: 0
+  detectionDistance: 10
 --- !u!114 &7857593231509309636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f93d9e1aefb7f0418cb4d3c41ea05d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 250
-  currentHealth: 250
+  maxHealth: 300
+  currentHealth: 300
   damageReduction: 0
   attackPreOrExecuting: 0
   isAlive: 0
@@ -573,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314192042904005132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.65, y: 0.25, z: 0}
+  m_LocalPosition: {x: 2.65, y: 0.25, z: 0}
   m_LocalScale: {x: 5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -676,7 +689,18 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
-  damage: 30
+  isCancelled: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
+  damage: 50
   objectsInRangeOfAttack: []
   knockBack: 20
 --- !u!1 &1314192043252794609
@@ -817,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314192043273185637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.83, y: -1.5, z: 0}
+  m_LocalPosition: {x: 1.83, y: -1.5, z: 0}
   m_LocalScale: {x: 3.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -920,9 +944,20 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
-  damage: 40
+  isCancelled: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
+  damage: 80
   objectsInRangeOfAttack: []
-  knockBack: 20
+  knockBack: 25
 --- !u!1 &1314192043474339844
 GameObject:
   m_ObjectHideFlags: 0

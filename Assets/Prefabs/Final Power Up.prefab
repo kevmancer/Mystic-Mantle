@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: damageReduction
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2783973601669381487, guid: 7563d3f0624fbb2439fbca14b4b8d845, type: 3}
+      propertyPath: playerPowerUpSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b04b91c68d91a7045a85a86a47cf938a, type: 3}
     - target: {fileID: 2783973603334087519, guid: 7563d3f0624fbb2439fbca14b4b8d845, type: 3}
       propertyPath: m_Color.b
       value: 1

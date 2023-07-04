@@ -196,8 +196,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6826808132569419942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.788, y: -0.508, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 1.225, y: -0.751, z: 0}
+  m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4315860226132364337}
@@ -299,9 +299,19 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 25
   objectsInRangeOfAttack: []
-  knockBack: 12
+  knockBack: 10
 --- !u!1 &6826808133285431337
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,8 +498,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   jumpForce: 800
-  isLookingLeft: 1
-  attacks: []
+  isLookingRight: 1
+  abilities: []
+  disableMovement: 0
+  detectionDistance: 10
 --- !u!114 &2416889325902721287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,8 +764,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6826808134012310479}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.783, y: 0.058, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalPosition: {x: 0.983, y: 0.058, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4315860226132364337}
@@ -855,6 +867,16 @@ MonoBehaviour:
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 0
+  preSoundFx:
+  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  hitSoundFx:
+  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
+  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
+  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  blockSoundFx:
+  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  execSoundFx: []
   damage: 10
   objectsInRangeOfAttack: []
   knockBack: 7
