@@ -69,6 +69,7 @@ public class Entity : MonoBehaviour
     {
         isAlive = false;
         entityControl.CancelAbilities();
+        entityControl.OnDeath();
         entityRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator.SetTrigger("death");
     }

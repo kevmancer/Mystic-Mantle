@@ -29,7 +29,7 @@ public class EnemyControl : EntityControl
                 int i = 0;
                 foreach (Attack attack in abilities)
                 {
-                    if (attack.objectsInRangeOfAttack.Count > 0)
+                    if (attack.objectsInRangeOfAttack.Count > 0&&!attack.isOnCooldown)
                     {
                         attacksThatHitIndexes.Add(i);
                     }

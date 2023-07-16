@@ -15,7 +15,7 @@ public class PreFightSwitch : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            GameManager.instance.LoadNextScene();
         }
     }
 

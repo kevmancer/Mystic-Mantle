@@ -1,6 +1,4 @@
 {
-    "m_Name": "Settings",
-    "m_Path": "ProjectSettings/Packages/com.unity.probuilder/Settings.json",
     "m_Dictionary": {
         "m_DictionaryValues": [
             {
@@ -26,12 +24,12 @@
             {
                 "type": "UnityEngine.ProBuilder.SemVer, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "about.identifier",
-                "value": "{\"m_Value\":{\"m_Major\":5,\"m_Minor\":0,\"m_Patch\":7,\"m_Build\":-1,\"m_Type\":\"\",\"m_Metadata\":\"\",\"m_Date\":\"\"}}"
+                "value": "{\"m_Value\":{\"m_Major\":5,\"m_Minor\":1,\"m_Patch\":0,\"m_Build\":-1,\"m_Type\":\"\",\"m_Metadata\":\"\",\"m_Date\":\"\"}}"
             },
             {
                 "type": "UnityEngine.ProBuilder.SemVer, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "preferences.version",
-                "value": "{\"m_Value\":{\"m_Major\":5,\"m_Minor\":0,\"m_Patch\":7,\"m_Build\":-1,\"m_Type\":\"\",\"m_Metadata\":\"\",\"m_Date\":\"\"}}"
+                "value": "{\"m_Value\":{\"m_Major\":5,\"m_Minor\":1,\"m_Patch\":0,\"m_Build\":-1,\"m_Type\":\"\",\"m_Metadata\":\"\",\"m_Date\":\"\"}}"
             },
             {
                 "type": "UnityEngine.ProBuilder.PivotLocation, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -71,7 +69,7 @@
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "editor.toolbarIconGUI",
-                "value": "{\"m_Value\":true}"
+                "value": "{\"m_Value\":false}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -176,7 +174,7 @@
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ShapeBuilder.ActiveShapeIndex",
-                "value": "{\"m_Value\":2}"
+                "value": "{\"m_Value\":6}"
             },
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -201,17 +199,17 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastPivotPosition",
-                "value": "{\"m_Value\":{\"x\":-0.6540946960449219,\"y\":-12.300230026245118,\"z\":42.58824920654297}}"
+                "value": "{\"m_Value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize",
-                "value": "{\"m_Value\":{\"x\":1.3081893920898438,\"y\":24.600460052490236,\"z\":-85.17649841308594}}"
+                "value": "{\"m_Value\":{\"x\":36.9410400390625,\"y\":12.588478088378907,\"z\":-97.8638916015625}}"
             },
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastRotation",
-                "value": "{\"m_Value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}"
+                "value": "{\"m_Value\":{\"x\":-0.7071067690849304,\"y\":0.0,\"z\":0.0,\"w\":0.7071067690849304}}"
             },
             {
                 "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

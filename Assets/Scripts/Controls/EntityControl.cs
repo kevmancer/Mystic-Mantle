@@ -213,4 +213,9 @@ public class EntityControl : MonoBehaviour
         knockBackVector *= knockBackAmount;
         knockBack = true;
     }
+
+    public virtual void OnDeath()
+    {
+
+    }
 }

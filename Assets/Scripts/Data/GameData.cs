@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public int currentLevel = 0;
+    public int currentLevel = 1;
     public float currentHealth = Constants.maxHealth1;
 
     public void SetGameData(GameData gameData)
@@ -16,7 +16,7 @@ public class GameData
 
     public void ResetGameData()
     {
-        currentLevel = 0;
+        currentLevel = 1;
         currentHealth = Constants.maxHealth1;
     }
 

@@ -23,7 +23,7 @@ public class MenuManager : MonoBehaviour
         backButton = GameObject.Find("Back").gameObject;
         settingsManager = GameObject.Find("Settings Menu").GetComponent<SettingsManager>();
         GameManager.instance.menu = gameObject;
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             isOverlay = false;
             GameManager.instance.ShowMenu();
