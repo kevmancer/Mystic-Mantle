@@ -40,7 +40,7 @@ public class Entity : MonoBehaviour
         if (isAlive)
         {
             entityControl.KnockBack(knockBack, isAttackFromLeft);
-            animator.SetTrigger("damage");
+            //animator.SetTrigger("damage");
             currentHealth -= (int)((float)damage*(1F-damageReduction));
             if (currentHealth < 0)
             {

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9067556687918670179}
   - component: {fileID: 2263621464074909582}
   - component: {fileID: 692536649991058759}
+  - component: {fileID: 4408948903249089992}
   m_Layer: 3
   m_Name: Projectile Generator
   m_TagString: Untagged
@@ -143,6 +144,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4408948903249089992
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067556687918670178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b40520a863a8cd442a5121ec980de9d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9067556688228579710
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 9067556688228579710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9067556688705083805}
@@ -217,8 +239,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
-  m_Color: {r: 1, g: 0.7122642, b: 0.7122642, a: 1}
+  m_Sprite: {fileID: 1998244961, guid: 1a68ad73f96e74241aeb75d4b87fdea0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

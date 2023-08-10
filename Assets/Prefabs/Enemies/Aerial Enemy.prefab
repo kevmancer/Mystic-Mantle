@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 5102464830185909779}
   - component: {fileID: 2625609323901483262}
   - component: {fileID: 3640478701891385911}
+  - component: {fileID: 6746250548571060223}
   m_Layer: 3
   m_Name: Projectile Generator
   m_TagString: Untagged
@@ -244,6 +245,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6746250548571060223
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102464830185909778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbe530a66e18ca64a859fceb2768aa96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5102464830429689358
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +293,7 @@ Transform:
   m_GameObject: {fileID: 5102464830429689358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 5.9999995, y: 5.9999995, z: 5.9999995}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5102464829961033453}
@@ -318,8 +340,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
-  m_Color: {r: 1, g: 0.7122642, b: 0.7122642, a: 1}
+  m_Sprite: {fileID: -1472760817, guid: bfcbcd678c4a70b4bb1ee4974230e731, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -339,7 +361,7 @@ Animator:
   m_GameObject: {fileID: 5102464830429689358}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16bc3e95d24f865439e2162c704bfbe8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75507a3d6c3faf04bb220976c91de9d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -414,6 +436,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06, y: -0.06}
   serializedVersion: 2
   m_Radius: 0.35

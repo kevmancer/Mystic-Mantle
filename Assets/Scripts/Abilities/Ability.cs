@@ -11,15 +11,14 @@ public class Ability : MonoBehaviour
     public bool isOnCooldown;
     public bool isImmobilizing;
     public bool isCancelled;
-    protected SpriteRenderer abilityRenderer;
     protected EntityControl parentControl;
     public AudioClip[] preSoundFx, hitSoundFx, blockSoundFx, execSoundFx;
+    protected Animator animator;
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        abilityRenderer = gameObject.GetComponent<SpriteRenderer>();
-        abilityRenderer.enabled = false;
         parentControl = gameObject.transform.parent.transform.parent.GetComponent<EntityControl>();
+        animator = gameObject.GetComponent<Animator>();
         isOnCooldown = false;
         isExecuting = false;
         if (cooldown < preDelay + duration)
@@ -38,14 +37,14 @@ public class Ability : MonoBehaviour
     {
         isCancelled = true;
         isExecuting = false;
-        abilityRenderer.enabled = false;
         parentControl.disableMovement = false;
     }
 
-    public virtual void ExecuteAbility()
+    public virtual void ExecuteAbility(Animator entityAnimator,string triggerName)
     {
         if (!isOnCooldown&&!isExecuting&&!isCancelled)
         {
+            entityAnimator.SetTrigger(triggerName);
             OnPreExecuting();
             StartCoroutine(AbilityCooldown());
             StartCoroutine(AbilityPreDelay());
@@ -57,7 +56,7 @@ public class Ability : MonoBehaviour
         yield return new WaitForSeconds(preDelay);
         if (!isCancelled)
         {
-            abilityRenderer.color = Color.white;
+            animator.SetTrigger("attackExecuted");
             isExecuting = true;
             OnStartExecuting();
             StartCoroutine(AbilityDuration());
@@ -66,8 +65,6 @@ public class Ability : MonoBehaviour
 
     protected virtual void OnPreExecuting()
     {
-        abilityRenderer.enabled = true;
-        abilityRenderer.color = Color.red;
         AudioFxManager.instance.PlayAudioFxClip(preSoundFx, transform);
         isOnCooldown = true;
         if (isImmobilizing)
@@ -94,7 +91,6 @@ public class Ability : MonoBehaviour
         yield return new WaitForSeconds(duration);
         if (!isCancelled)
         {
-            abilityRenderer.enabled = false;
             isExecuting = false;
             OnStopExecuting();
         }

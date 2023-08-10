@@ -39,11 +39,11 @@ public class Attack : Ability
         }
     }
 
-    public override void ExecuteAbility()
+    public override void ExecuteAbility(Animator entityAnimator, string triggerName)
     {
         if (!parentEntity.attackPreOrExecuting)
         {
-            base.ExecuteAbility();
+            base.ExecuteAbility(entityAnimator, triggerName);
         }
     }
 

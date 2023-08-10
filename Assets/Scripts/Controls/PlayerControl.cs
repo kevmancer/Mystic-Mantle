@@ -50,14 +50,14 @@ public class PlayerControl: EntityControl
             backShiledObject.transform.localPosition = new Vector3(-Math.Abs(backShiledObject.transform.localPosition.x), backShiledObject.transform.localPosition.y, backShiledObject.transform.localPosition.z);
             SpriteRenderer attackSprite = backShiledObject.GetComponent<SpriteRenderer>();
             attackSprite.flipX = false;
-            backShield.ExecuteAbility();
+            backShield.ExecuteAbility(entity.animator,"backShield");
         }
         else
         {
             backShiledObject.transform.localPosition = new Vector3(Math.Abs(backShiledObject.transform.localPosition.x), backShiledObject.transform.localPosition.y, backShiledObject.transform.localPosition.z);
             SpriteRenderer attackSprite = backShiledObject.GetComponent<SpriteRenderer>();
             attackSprite.flipX = true;
-            backShield.ExecuteAbility();
+            backShield.ExecuteAbility(entity.animator, "backShield");
         }
     }
 

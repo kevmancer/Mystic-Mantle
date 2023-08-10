@@ -50,24 +50,32 @@ public class EntityControl : MonoBehaviour
     {
         if (!disableMovement)
         {
+            if (!moveLeft && !moveRight)
+            {
+                entity.animator.SetBool("isMoving", false);
+            }
             if (moveLeft)
             {
+                entity.animator.SetBool("isMoving", true);
                 transform.Translate(Vector3.left * Time.deltaTime * speed);
                 moveLeft = false;
             }
             if (moveRight)
             {
+                entity.animator.SetBool("isMoving", true);
                 transform.Translate(Vector3.right * Time.deltaTime * speed);
                 moveRight = false;
             }
             if (jump)
             {
+                entity.animator.SetBool("isMoving", false);
                 entitytRb.velocity = Vector3.zero;
                 entitytRb.AddForce(Vector3.up * jumpForce);
                 jump = false;
             }
             if (knockBack)
             {
+                entity.animator.SetBool("isMoving", false);
                 entitytRb.velocity = Vector3.zero;
                 entitytRb.AddForce(knockBackVector, ForceMode2D.Impulse);
                 knockBack = false;
@@ -75,6 +83,7 @@ public class EntityControl : MonoBehaviour
         }
         else
         {
+            entity.animator.SetBool("isMoving", false);
             moveLeft = false;
             moveRight = false;
             jump = false;
@@ -122,6 +131,7 @@ public class EntityControl : MonoBehaviour
         {
             jump = true;
             isOnGround = false;
+            entity.animator.SetBool("isJumping", true);
         }
     }
 
@@ -129,7 +139,7 @@ public class EntityControl : MonoBehaviour
     {
         //    if (!punchAttack.attackExecuting && !kickAttack.attackExecuting)
         //   {
-        abilities[0].ExecuteAbility();
+        abilities[0].ExecuteAbility(entity.animator,"lightAttack");
         //  }
     }
 
@@ -137,7 +147,7 @@ public class EntityControl : MonoBehaviour
     {
         //    if (!punchAttack.attackExecuting && !kickAttack.attackExecuting)
         //    {
-        abilities[1].ExecuteAbility();
+        abilities[1].ExecuteAbility(entity.animator, "heavyAttack");
         //   }
     }
 
@@ -145,14 +155,25 @@ public class EntityControl : MonoBehaviour
     {
         if (abilities.Count == 3)
         {
-            abilities[2].ExecuteAbility();
+            abilities[2].ExecuteAbility(entity.animator, "ultAttack");
         }
     }
 
     protected void RandomAttack(List<int> attacksThatHitIndexes)
     {
         int random = UnityEngine.Random.Range(0, attacksThatHitIndexes.Count - 1);
-        abilities[attacksThatHitIndexes[random]].ExecuteAbility();
+        switch (attacksThatHitIndexes[random])
+        {
+            case 0:
+                LightAttack();
+                break;
+            case 1:
+                HeavyAttack();
+                break;
+            case 2:
+                UltimateAttack();
+                break;
+        }
     }
 
     public virtual void CancelAbilities()
@@ -191,6 +212,7 @@ public class EntityControl : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            entity.animator.SetBool("isJumping", false);
             isOnGround = true;
         }
         if(collision.gameObject.layer == 3)
