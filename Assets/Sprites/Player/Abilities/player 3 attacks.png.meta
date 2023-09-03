@@ -1,0 +1,859 @@
+fileFormatVersion: 2
+guid: 0fb0149e71f8cd84a8c082e214a16689
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player 3 attacks l_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c746f480a331014f8d9a417563f4598
+      internalID: 1927612767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks l_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 960
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f27d16203b60634fab7c01157ce2807
+      internalID: 467034480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks l_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 960
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4d814bc6b7f7a41aafb904e20e30df
+      internalID: 942794891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks l_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 960
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4408fb0f7f8132e4897989a326a8d7b2
+      internalID: 1132245329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks l_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d48fcdc6ae65194e8e75c218ee38a8e
+      internalID: -728793761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks h_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d735025741ac6e34f86b2be8e87727cd
+      internalID: 1071787168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks h_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 928
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8751bff42c158742903599c46548929
+      internalID: -1835328143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks h_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 928
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f304e1ee5939bf4e82cf605f9e0eeaa
+      internalID: -1080648281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks h_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 928
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b7e7731ede3fa46894a3dbda24c505
+      internalID: -877603390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks h_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 928
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcd61f502c08974dbfb7b333b5b709f
+      internalID: -881394364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks bs_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd2a595e00fb0b40bffd2aa1fd7315d
+      internalID: -1652923607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks bs_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070f37e23e6aea543a1ac3a2a918245f
+      internalID: -1276926818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks bs_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea992f725d01e6746b2b0995f1d06cc4
+      internalID: -9168062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks bs_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0e5e04d283d004d8ceb05a17798343
+      internalID: -1142235894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks bs_127
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb1ea2a3279ef0499a41c5398eff6eb
+      internalID: -1951856282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04791f5945598a144870b0565fbf5953
+      internalID: -727183243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83db9c022fb715244928aafefaa95b3d
+      internalID: 1188835217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6ce66071a04f0498e105fdf786edad
+      internalID: 1249363263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d36f3e7ec217b449a3d4fabb951979c
+      internalID: -1506041805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01fedce2d700ec45a6c312747476922
+      internalID: -1195713853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633499ab3b4e0484c8e928ac696d4852
+      internalID: -1842141833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296a408b94e2ab74c8205eead434cc5d
+      internalID: 1478755202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d49dab9970a7545a699d7fc110b3ee
+      internalID: -1921494984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fb974610d4a1f44b5c5d37ae3379c8
+      internalID: 1732585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08598449c7b31074f957acd01fe52fb3
+      internalID: 1766905158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5185e5ccaa3d9e246b2ad359f88c9ba6
+      internalID: -879864006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494dd02749c223743b1acb2b3d4ce5cd
+      internalID: 936768852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 3 attacks ult_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605550512c9093f4b8c2ba18cd0b5fbf
+      internalID: -1918220553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f0c54c05e7d609648947983173945500
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 0b14c79b5c7a0b046bb4246d703ed1e5, type: 3}
+      name: _Emission
+    nameFileIdTable:
+      player 3 attacks bs_10: -1276926818
+      player 3 attacks bs_11: -9168062
+      player 3 attacks bs_12: -1142235894
+      player 3 attacks bs_127: -1951856282
+      player 3 attacks bs_13: -1142235894
+      player 3 attacks h_5: -1835328143
+      player 3 attacks h_6: -1080648281
+      player 3 attacks h_7: -877603390
+      player 3 attacks h_8: -881394364
+      player 3 attacks h_9: -1652923607
+      player 3 attacks l_0: 467034480
+      player 3 attacks l_1: 942794891
+      player 3 attacks l_2: 1132245329
+      player 3 attacks l_3: -728793761
+      player 3 attacks l_4: 1071787168
+      player 3 attacks ult_14: -727183243
+      player 3 attacks ult_15: 1188835217
+      player 3 attacks ult_16: 1249363263
+      player 3 attacks ult_17: -1506041805
+      player 3 attacks ult_18: -1195713853
+      player 3 attacks ult_19: -1842141833
+      player 3 attacks ult_20: 1478755202
+      player 3 attacks ult_21: -1921494984
+      player 3 attacks ult_22: 1732585
+      player 3 attacks ult_23: 1766905158
+      player 3 attacks ult_24: -879864006
+      player 3 attacks ult_25: 936768852
+      player 3 attacks ult_26: -1918220553
+      player 3 attacks_100: -1553649769
+      player 3 attacks_101: 1394188006
+      player 3 attacks_102: 840426115
+      player 3 attacks_103: -1111689621
+      player 3 attacks_104: -440522872
+      player 3 attacks_105: -464187459
+      player 3 attacks_106: -1487651294
+      player 3 attacks_107: -1290090471
+      player 3 attacks_108: 342251773
+      player 3 attacks_109: -1800531662
+      player 3 attacks_110: 825690545
+      player 3 attacks_111: -670277288
+      player 3 attacks_112: -1916660879
+      player 3 attacks_113: -100517784
+      player 3 attacks_114: 697823193
+      player 3 attacks_115: 268293176
+      player 3 attacks_116: -1161091811
+      player 3 attacks_117: -748430144
+      player 3 attacks_118: 99699537
+      player 3 attacks_119: -613660600
+      player 3 attacks_120: -163331078
+      player 3 attacks_121: 1351282892
+      player 3 attacks_122: -861184039
+      player 3 attacks_123: 1053755559
+      player 3 attacks_124: -961531985
+      player 3 attacks_125: 859193204
+      player 3 attacks_126: -1951856282
+      player 3 attacks_26: -1426928020
+      player 3 attacks_27: 743384045
+      player 3 attacks_28: 1265525344
+      player 3 attacks_29: 1709338542
+      player 3 attacks_30: -703337975
+      player 3 attacks_31: -259205227
+      player 3 attacks_32: 916963361
+      player 3 attacks_33: -2064095762
+      player 3 attacks_34: -2062054620
+      player 3 attacks_35: 1004222360
+      player 3 attacks_36: 334651045
+      player 3 attacks_37: -1427708050
+      player 3 attacks_38: -1336458874
+      player 3 attacks_39: 1980929849
+      player 3 attacks_40: 237260695
+      player 3 attacks_41: -573723349
+      player 3 attacks_42: 1159017095
+      player 3 attacks_43: -344751572
+      player 3 attacks_44: -1015546840
+      player 3 attacks_45: -434088465
+      player 3 attacks_46: -744121453
+      player 3 attacks_47: -436247059
+      player 3 attacks_48: 1086892077
+      player 3 attacks_49: 286752688
+      player 3 attacks_50: 1767391330
+      player 3 attacks_51: 1794316260
+      player 3 attacks_52: 1236034830
+      player 3 attacks_53: -93849150
+      player 3 attacks_54: 295110484
+      player 3 attacks_55: 2133342940
+      player 3 attacks_56: -37635560
+      player 3 attacks_57: 999184081
+      player 3 attacks_58: -1569562587
+      player 3 attacks_59: 720939285
+      player 3 attacks_60: 855384702
+      player 3 attacks_61: 551865225
+      player 3 attacks_62: -1811348068
+      player 3 attacks_63: -351306201
+      player 3 attacks_64: 2064848461
+      player 3 attacks_65: 1047844886
+      player 3 attacks_66: -1123721042
+      player 3 attacks_67: 150514010
+      player 3 attacks_68: -1316641008
+      player 3 attacks_69: -900782383
+      player 3 attacks_70: 601489674
+      player 3 attacks_71: 1683630589
+      player 3 attacks_72: 58585347
+      player 3 attacks_73: 2133015856
+      player 3 attacks_74: 1967436174
+      player 3 attacks_75: 1347409371
+      player 3 attacks_76: 103236774
+      player 3 attacks_77: -1112168569
+      player 3 attacks_78: 1853334078
+      player 3 attacks_79: 175616866
+      player 3 attacks_80: -2089852658
+      player 3 attacks_81: -283596231
+      player 3 attacks_82: 702765636
+      player 3 attacks_83: -484760652
+      player 3 attacks_84: -1766172112
+      player 3 attacks_85: -463421468
+      player 3 attacks_86: 590474325
+      player 3 attacks_87: 211236057
+      player 3 attacks_88: 1635552865
+      player 3 attacks_89: 1078926182
+      player 3 attacks_90: -384046396
+      player 3 attacks_91: -1556252273
+      player 3 attacks_92: 315785167
+      player 3 attacks_93: 982815759
+      player 3 attacks_94: 1982451219
+      player 3 attacks_95: 697164278
+      player 3 attacks_96: 751340842
+      player 3 attacks_97: 1865648787
+      player 3 attacks_98: 2023184385
+      player 3 attacks_99: 138305798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

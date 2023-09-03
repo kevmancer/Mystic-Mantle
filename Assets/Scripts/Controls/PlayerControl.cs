@@ -63,15 +63,15 @@ public class PlayerControl: EntityControl
 
     private void SetBackShield()
     {
-        backShiledObject = gameObject.transform.GetChild(5).gameObject.transform.GetChild(3).gameObject;
+        backShiledObject = gameObject.transform.GetChild(gameObject.transform.childCount - 1).gameObject.transform.GetChild(3).gameObject;
         backShield = backShiledObject.GetComponent<BackShield>();
     }
 
-    public void AquiredPowerUp(float newSpeed, float newJumpForce, GameObject newAttacksPrefab, Sprite playerPowerUpSprite)
+    public void AquiredPowerUp(float newSpeed, float newJumpForce, GameObject newAttacksPrefab, RuntimeAnimatorController playerPowerUpAnimator)
     {
         speed = newSpeed;
         jumpForce = newJumpForce;
-        characterSprite.sprite = playerPowerUpSprite;
+        characterAnimator.runtimeAnimatorController = playerPowerUpAnimator;
         StartCoroutine(ReplaceAttacks(newAttacksPrefab));
     }
 

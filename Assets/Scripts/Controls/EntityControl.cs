@@ -8,6 +8,7 @@ public class EntityControl : MonoBehaviour
     public float speed = 10;
     public float jumpForce = 30;
     protected bool isOnGround = false;
+    protected Animator characterAnimator;
     protected SpriteRenderer characterSprite;
     protected GameObject abilityParent;
     protected List<GameObject> attackObjects = new List<GameObject>();
@@ -25,6 +26,7 @@ public class EntityControl : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        characterAnimator = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         characterSprite = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
         SetAbilities();
         entity = gameObject.GetComponent<Entity>();

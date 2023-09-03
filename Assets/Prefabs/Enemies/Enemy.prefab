@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028805137, y: 0.17188817}
+  m_Offset: {x: -0.014212772, y: 0.17188817}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0576103, y: 1.343776}
+  m_Size: {x: 0.9715742, y: 1.343776}
   m_EdgeRadius: 0
 --- !u!1 &3473153281771522144
 GameObject:
@@ -274,7 +274,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040770236, y: -0.056171894}
+  m_Offset: {x: 0, y: -0.056171894}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -285,7 +285,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24462935, y: 0.1714054}
+  m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
 --- !u!212 &3473153281783653878
 SpriteRenderer:
@@ -351,8 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb2c352f34c8e4a9e2e3c15a60f8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preDelay: 0.6
-  duration: 0.3
+  preDelay: 0.1666667
+  animationPreDelay: 0.08333334
+  damageDuration: 0.25
   cooldown: 2
   isExecuting: 0
   isOnCooldown: 0
@@ -928,7 +929,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0027752817, y: -0.037944563}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -939,7 +940,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27769744, y: 0.1872229}
+  m_Size: {x: 0.22, y: 0.13}
   m_EdgeRadius: 0
 --- !u!212 &3473153283226543775
 SpriteRenderer:
@@ -1005,8 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb2c352f34c8e4a9e2e3c15a60f8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preDelay: 0.4
-  duration: 0.2
+  preDelay: 0.1666667
+  animationPreDelay: 0.08333334
+  damageDuration: 0.25
   cooldown: 2
   isExecuting: 0
   isOnCooldown: 0

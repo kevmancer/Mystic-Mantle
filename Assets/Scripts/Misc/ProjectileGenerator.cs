@@ -8,7 +8,7 @@ public class ProjectileGenerator : Ability
     protected override void Start()
     {
         base.Start();
-        duration = 0f;
+        damageDuration = 0f;
     }
     protected override void OnStartExecuting()
     {

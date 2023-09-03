@@ -61,7 +61,7 @@ public class Projectile : MonoBehaviour
     {
         if (objectToAttack.CompareTag("Player"))
         {
-            BackShield backShield = objectToAttack.transform.parent.gameObject.transform.GetChild(5).gameObject.transform.GetChild(3).GetComponent<BackShield>();
+            BackShield backShield = objectToAttack.transform.parent.gameObject.transform.GetChild(objectToAttack.transform.parent.gameObject.transform.childCount - 1).gameObject.transform.GetChild(3).GetComponent<BackShield>();
             PlayerControl playerControl = objectToAttack.transform.parent.gameObject.GetComponent<PlayerControl>();
             if (backShield.isExecuting)
             {

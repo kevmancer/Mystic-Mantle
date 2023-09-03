@@ -19,6 +19,12 @@ public class Player : Entity
         gameManager.LoadLastSave();
     }
 
+    protected override void DamageReceived(int damage, float knockBack, bool isAttackFromLeft)
+    {
+        base.DamageReceived(damage, knockBack, isAttackFromLeft);
+        gameManager.CameraBump();
+    }
+
     protected override void EntityDeath()
     {
         base.EntityDeath();

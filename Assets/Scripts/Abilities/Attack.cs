@@ -68,7 +68,7 @@ public class Attack : Ability
     {
         if (objectToAttack.CompareTag("Player"))
         {
-            BackShield backShield = objectToAttack.transform.parent.gameObject.transform.GetChild(5).gameObject.transform.GetChild(3).GetComponent<BackShield>();
+            BackShield backShield = objectToAttack.transform.parent.gameObject.transform.GetChild(objectToAttack.transform.parent.gameObject.transform.childCount - 1).gameObject.transform.GetChild(3).GetComponent<BackShield>();
             PlayerControl playerControl = objectToAttack.transform.parent.gameObject.GetComponent<PlayerControl>();
             if (backShield.isExecuting)
             {
@@ -110,6 +110,11 @@ public class Attack : Ability
     protected override void OnStopExecuting()
     {
         base.OnStopExecuting();
+    }
+
+    protected override void OnAbilityFinished()
+    {
+        base.OnAbilityFinished();
         parentEntity.attackPreOrExecuting = false;
     }
 

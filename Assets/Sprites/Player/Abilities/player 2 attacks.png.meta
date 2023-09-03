@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: 241e918cfe29bf14fa21c17c12833511
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player 2 attacks l_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25551d07a5c17543b1942c312b060bb
+      internalID: 2105088446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks l_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b708f76fef62df44b88450420bebf691
+      internalID: 1814400574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks l_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be152486460eece4d9b7d449c4ce1085
+      internalID: -1087162586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks l_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 960
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352ee72a5e820c8488d4e09ea4d1cb23
+      internalID: 1111233136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks l_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 960
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4fbb4f806b7674bb668f19af5f8c4b
+      internalID: -1810357006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5330b8c4a167bfc468d394af87ca9390
+      internalID: 1178844141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 928
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89ab25f3d27f984d83803e67a733942
+      internalID: -1255975177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 928
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5334549a723a7cf4b949508a5c5206d8
+      internalID: -1652388988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 928
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc988f04021acf8468816c3a794a5dc9
+      internalID: 1097214336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 928
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e8705531d84284d8116fbb6370e7f2
+      internalID: 418892723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks h_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 928
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25358105, y: 0.4999981}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cd9fd326080a245a92822c1af2bd1c
+      internalID: 220374658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks bs_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdd041bf8b43b0449f76dfb8b3af4ef
+      internalID: 1649276399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks bs_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6a067227ca6eb47b30468b4be3ecd1
+      internalID: -2065488731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks bs_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc637c028efe6c459b0100eceaf82e1
+      internalID: -2008111568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks bs_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abbb72222b4ec44bb3e61875d86b492
+      internalID: 336267769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks bs_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ed715dda28fd04899e25ecb1a71676
+      internalID: -278059890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd0cd6a85ada5e4296d8fbb83f8f4a8
+      internalID: 1017633261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b8c1cecf3fa7d43bf4282083fb515f
+      internalID: 817343539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb891b7e19cb76340a63b9488f1a4e40
+      internalID: 1324003479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26e5ead5d8dca14c8ed14a9608d34d4
+      internalID: -194971261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c74a3bd0e418c459592cf0a35583b7
+      internalID: -1499559308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b1493dee07cb441ab0589b0a3997ce
+      internalID: -959372647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3aadb0c602ae6e4d916a8323df39978
+      internalID: -1678275227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecbd00443ff4334185e8000997bd32a
+      internalID: 1072438857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b407848e799cd74b8a1108624032f96
+      internalID: 1166116067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eddf9f8f10c7e842a3b579d647f1741
+      internalID: -1788376846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d081d45b8b31b4f8a5ddc98927d88d
+      internalID: 255873124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46df6db60c6678d4e994ea4b717d5230
+      internalID: 432938373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player 2 attacks ult_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a69d2c8d5e69a84bbf42a8aa088e66c
+      internalID: -1887553560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 2655e4d6c8703434180778b4d1e9fd00, type: 3}
+      name: _Emission
+    nameFileIdTable:
+      player 2 attacks bs_11: -2065488731
+      player 2 attacks bs_12: -2008111568
+      player 2 attacks bs_13: 336267769
+      player 2 attacks bs_14: -278059890
+      player 2 attacks bs_15: 1017633261
+      player 2 attacks h_10: 1649276399
+      player 2 attacks h_5: -1255975177
+      player 2 attacks h_6: -1652388988
+      player 2 attacks h_7: 1097214336
+      player 2 attacks h_8: 418892723
+      player 2 attacks h_9: 220374658
+      player 2 attacks l_0: 1814400574
+      player 2 attacks l_1: -1087162586
+      player 2 attacks l_2: 1111233136
+      player 2 attacks l_3: -1810357006
+      player 2 attacks l_4: 1178844141
+      player 2 attacks ult_16: 817343539
+      player 2 attacks ult_17: 1324003479
+      player 2 attacks ult_18: -194971261
+      player 2 attacks ult_19: -1499559308
+      player 2 attacks ult_20: -959372647
+      player 2 attacks ult_21: -1678275227
+      player 2 attacks ult_22: -1678275227
+      player 2 attacks ult_23: 1072438857
+      player 2 attacks ult_24: 1166116067
+      player 2 attacks ult_25: -1788376846
+      player 2 attacks ult_26: 255873124
+      player 2 attacks ult_27: 432938373
+      player 2 attacks ult_28: -1887553560
+      player 2 attacks_100: -1963738843
+      player 2 attacks_101: 451204377
+      player 2 attacks_102: 1697573509
+      player 2 attacks_103: 872627226
+      player 2 attacks_104: 997298565
+      player 2 attacks_105: -1067565944
+      player 2 attacks_106: -297935734
+      player 2 attacks_107: -1836495661
+      player 2 attacks_108: -242672724
+      player 2 attacks_109: 642794026
+      player 2 attacks_110: 1231090498
+      player 2 attacks_111: -448150833
+      player 2 attacks_112: 948306449
+      player 2 attacks_113: -701402602
+      player 2 attacks_114: 985091671
+      player 2 attacks_115: -758555457
+      player 2 attacks_116: -1740824108
+      player 2 attacks_117: 325889940
+      player 2 attacks_118: 44894979
+      player 2 attacks_119: 1305496720
+      player 2 attacks_120: 982431157
+      player 2 attacks_121: 529596486
+      player 2 attacks_122: -333101251
+      player 2 attacks_123: 1128002419
+      player 2 attacks_124: -1101897859
+      player 2 attacks_125: 2010221853
+      player 2 attacks_126: 2052207291
+      player 2 attacks_127: 162935434
+      player 2 attacks_128: -1247683116
+      player 2 attacks_129: 1286945938
+      player 2 attacks_130: -1897133608
+      player 2 attacks_131: 1897012282
+      player 2 attacks_132: 1508096284
+      player 2 attacks_133: 369252924
+      player 2 attacks_134: 2098738207
+      player 2 attacks_135: -525088278
+      player 2 attacks_136: -999643308
+      player 2 attacks_137: -1685247404
+      player 2 attacks_138: 949328742
+      player 2 attacks_139: -2070858103
+      player 2 attacks_140: 690143184
+      player 2 attacks_141: 1674593494
+      player 2 attacks_142: 1035459723
+      player 2 attacks_143: 152627224
+      player 2 attacks_144: -81634745
+      player 2 attacks_145: 398257093
+      player 2 attacks_146: -1019458931
+      player 2 attacks_147: 84442948
+      player 2 attacks_148: 220255543
+      player 2 attacks_149: 1229863662
+      player 2 attacks_150: -1690265303
+      player 2 attacks_151: 1102679890
+      player 2 attacks_152: 634345313
+      player 2 attacks_153: -1744682466
+      player 2 attacks_154: -291800963
+      player 2 attacks_155: 1517635314
+      player 2 attacks_156: 1472622162
+      player 2 attacks_157: 151799482
+      player 2 attacks_158: 1251893731
+      player 2 attacks_159: 416196838
+      player 2 attacks_160: 1243244838
+      player 2 attacks_161: 1216625811
+      player 2 attacks_162: 1499819270
+      player 2 attacks_163: 648116764
+      player 2 attacks_164: -978870259
+      player 2 attacks_165: 1838742134
+      player 2 attacks_166: 657124181
+      player 2 attacks_167: -1585226115
+      player 2 attacks_168: 1490730225
+      player 2 attacks_169: -1356273795
+      player 2 attacks_170: -269951094
+      player 2 attacks_171: -82572868
+      player 2 attacks_172: 707989904
+      player 2 attacks_173: -1325456565
+      player 2 attacks_174: -1289225165
+      player 2 attacks_175: 1809435811
+      player 2 attacks_176: 835504152
+      player 2 attacks_177: 2039402626
+      player 2 attacks_178: 425812808
+      player 2 attacks_179: -1002806765
+      player 2 attacks_180: -546497387
+      player 2 attacks_181: -1792491705
+      player 2 attacks_182: -1094576404
+      player 2 attacks_183: -594120603
+      player 2 attacks_184: -1613658375
+      player 2 attacks_185: -1948320054
+      player 2 attacks_186: 2016744830
+      player 2 attacks_187: 1131003582
+      player 2 attacks_188: 2105088446
+      player 2 attacks_29: -482835434
+      player 2 attacks_30: -719903581
+      player 2 attacks_31: 544131222
+      player 2 attacks_32: 2133970482
+      player 2 attacks_33: 1470894652
+      player 2 attacks_34: -1830622475
+      player 2 attacks_35: -909268373
+      player 2 attacks_36: -2123948838
+      player 2 attacks_37: 1533189767
+      player 2 attacks_38: 1752978711
+      player 2 attacks_39: 1535812639
+      player 2 attacks_40: -551680284
+      player 2 attacks_41: 1909271661
+      player 2 attacks_42: 44421292
+      player 2 attacks_43: 1005977295
+      player 2 attacks_44: 845114587
+      player 2 attacks_45: 385866910
+      player 2 attacks_46: 344981836
+      player 2 attacks_47: -1086054391
+      player 2 attacks_48: 612614918
+      player 2 attacks_49: 1578370758
+      player 2 attacks_50: -1160818429
+      player 2 attacks_51: -257726761
+      player 2 attacks_52: 1890837202
+      player 2 attacks_53: 624516105
+      player 2 attacks_54: -1272308311
+      player 2 attacks_55: -1390718286
+      player 2 attacks_56: -1282552861
+      player 2 attacks_57: 189596255
+      player 2 attacks_58: 42124812
+      player 2 attacks_59: -1191096006
+      player 2 attacks_60: -1762303389
+      player 2 attacks_61: -2014501358
+      player 2 attacks_62: 1439850233
+      player 2 attacks_63: -436761475
+      player 2 attacks_64: -526730092
+      player 2 attacks_65: -1694469217
+      player 2 attacks_66: 381513150
+      player 2 attacks_67: 1620954789
+      player 2 attacks_68: 776921840
+      player 2 attacks_69: -1743946867
+      player 2 attacks_70: -1248475383
+      player 2 attacks_71: 439219322
+      player 2 attacks_72: 1632761615
+      player 2 attacks_73: 1560691625
+      player 2 attacks_74: 742445056
+      player 2 attacks_75: -745460629
+      player 2 attacks_76: -1073270422
+      player 2 attacks_77: -80718966
+      player 2 attacks_78: 188461708
+      player 2 attacks_79: 1226335573
+      player 2 attacks_80: 1990884048
+      player 2 attacks_81: -508365512
+      player 2 attacks_82: -415171658
+      player 2 attacks_83: -998524475
+      player 2 attacks_84: 337636271
+      player 2 attacks_85: 902891354
+      player 2 attacks_86: -1482922661
+      player 2 attacks_87: 1274595355
+      player 2 attacks_88: -740546185
+      player 2 attacks_89: -2093737841
+      player 2 attacks_90: 288401642
+      player 2 attacks_91: 1671560228
+      player 2 attacks_92: -940210109
+      player 2 attacks_93: -2007803204
+      player 2 attacks_94: 1343157625
+      player 2 attacks_95: -1923539743
+      player 2 attacks_96: 598036266
+      player 2 attacks_97: 1976985898
+      player 2 attacks_98: -401121830
+      player 2 attacks_99: -1304886450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

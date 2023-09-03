@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Ability : MonoBehaviour
 {
+    // time between ability trigger and animation start playing
     public float preDelay;
-    public float duration;
+    // time between animation start and damage/effenct happening
+    public float animationPreDelay;
+    public float damageDuration;
+    private float animationDuration;
+    private float abilityDuration;
     public float cooldown;
     public bool isExecuting;
     public bool isOnCooldown;
@@ -21,10 +26,27 @@ public class Ability : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         isOnCooldown = false;
         isExecuting = false;
-        if (cooldown < preDelay + duration)
+        if (animationDuration < animationPreDelay + damageDuration)
         {
-            cooldown = preDelay + duration;
+            animationDuration = animationPreDelay + damageDuration;
         }
+        if (cooldown < preDelay + damageDuration)
+        {
+            cooldown = preDelay + damageDuration;
+        }
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+        foreach(AnimationClip clip in clips)
+        {
+            switch (clip.name)
+            {
+                case "Effect idle":
+                    break;
+                default:
+                    animationDuration = clip.length;
+                    break;
+            }
+        }
+        abilityDuration = preDelay + animationDuration;
     }
 
     // Update is called once per frame
@@ -45,9 +67,14 @@ public class Ability : MonoBehaviour
         if (!isOnCooldown&&!isExecuting&&!isCancelled)
         {
             entityAnimator.SetTrigger(triggerName);
+            StartCoroutine(AbilityPreDelay());
             OnPreExecuting();
             StartCoroutine(AbilityCooldown());
-            StartCoroutine(AbilityPreDelay());
+            if (isImmobilizing)
+            {
+                parentControl.disableMovement = true;
+            }
+            StartCoroutine(AbilityDuration());
         }
     }
 
@@ -57,9 +84,18 @@ public class Ability : MonoBehaviour
         if (!isCancelled)
         {
             animator.SetTrigger("attackExecuted");
+            StartCoroutine(AbilityAnimationPreDelay());
+        }
+    }
+
+    protected virtual IEnumerator AbilityAnimationPreDelay()
+    {
+        yield return new WaitForSeconds(animationPreDelay);
+        if (!isCancelled)
+        {
             isExecuting = true;
             OnStartExecuting();
-            StartCoroutine(AbilityDuration());
+            StartCoroutine(AbilityDamageDuration());
         }
     }
 
@@ -67,10 +103,6 @@ public class Ability : MonoBehaviour
     {
         AudioFxManager.instance.PlayAudioFxClip(preSoundFx, transform);
         isOnCooldown = true;
-        if (isImmobilizing)
-        {
-            parentControl.disableMovement = true;
-        }
     }
 
     protected virtual void OnStartExecuting()
@@ -80,15 +112,12 @@ public class Ability : MonoBehaviour
 
     protected virtual void OnStopExecuting()
     {
-        if (isImmobilizing)
-        {
-            parentControl.disableMovement = false;
-        }
+        
     }
 
-    protected virtual IEnumerator AbilityDuration()
+    protected virtual IEnumerator AbilityDamageDuration()
     {
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(damageDuration);
         if (!isCancelled)
         {
             isExecuting = false;
@@ -100,5 +129,20 @@ public class Ability : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
         isOnCooldown = false;
+    }
+
+    protected virtual IEnumerator AbilityDuration()
+    {
+        yield return new WaitForSeconds(abilityDuration);
+        if (isImmobilizing)
+        {
+            parentControl.disableMovement = false;
+        }
+        OnAbilityFinished();
+    }
+
+    protected virtual void OnAbilityFinished()
+    {
+
     }
 }

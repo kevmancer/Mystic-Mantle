@@ -91,4 +91,29 @@ public class GameManager : MonoBehaviour
         gameData.ResetGameData();
         SaveManager.SaveGameData(gameData);
     }
+
+    public void CameraShake(bool isShaking)
+    {
+        Animator cameraAnimator = GameObject.Find("Main Camera").GetComponent<Animator>();
+        cameraAnimator.SetBool("shaking", isShaking);
+    }
+
+    public void CameraShake(float duration)
+    {
+        Animator cameraAnimator = GameObject.Find("Main Camera").GetComponent<Animator>();
+        cameraAnimator.SetBool("shaking", true);
+    }
+
+    private IEnumerator CameraShakeDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Animator cameraAnimator = GameObject.Find("Main Camera").GetComponent<Animator>();
+        cameraAnimator.SetBool("shaking", false);
+    }
+
+    public void CameraBump()
+    {
+        Animator cameraAnimator = GameObject.Find("Main Camera").GetComponent<Animator>();
+        cameraAnimator.SetTrigger("shake");
+    }
 }

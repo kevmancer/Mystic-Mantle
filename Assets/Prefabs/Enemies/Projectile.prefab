@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5143828233004106609}
   - component: {fileID: 4268361614475123099}
   - component: {fileID: 6405916198287174897}
+  - component: {fileID: 5099785090683566211}
   m_Layer: 3
   m_Name: Projectile
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3990123846827125497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1547305122, guid: 1a68ad73f96e74241aeb75d4b87fdea0, type: 3}
+  m_Sprite: {fileID: -1748751120, guid: d4d40ab93bca138438991cdea4cf3a21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.023
+  m_Radius: 0.03
 --- !u!114 &6405916198287174897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +145,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
   missSoundFx:
   - {fileID: 8300000, guid: c2f82f266afb5f5438d9ca1755bd06d9, type: 3}
+--- !u!95 &5099785090683566211
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3990123846827125497}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acad5828acfab104e93ca7ff137e8d23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

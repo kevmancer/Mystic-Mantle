@@ -35,21 +35,26 @@ public class Entity : MonoBehaviour
         
     }
 
+    protected virtual void DamageReceived(int damage, float knockBack, bool isAttackFromLeft)
+    {
+        entityControl.KnockBack(knockBack, isAttackFromLeft);
+        //animator.SetTrigger("damage");
+        currentHealth -= (int)((float)damage * (1F - damageReduction));
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+        if (currentHealth == 0)
+        {
+            EntityDeath();
+        }
+    }
+
     public void DamageEntity(int damage, float knockBack, bool isAttackFromLeft)
     {
         if (isAlive)
         {
-            entityControl.KnockBack(knockBack, isAttackFromLeft);
-            //animator.SetTrigger("damage");
-            currentHealth -= (int)((float)damage*(1F-damageReduction));
-            if (currentHealth < 0)
-            {
-                currentHealth = 0;
-            }
-            if (currentHealth == 0)
-            {
-                EntityDeath();
-            }
+            DamageReceived(damage,knockBack,isAttackFromLeft);
         }
     }
 

@@ -17,6 +17,7 @@ public class ParallaxManager : MonoBehaviour
     public int smoothingAmount = 1;
     public Vector3 facePosition { get; private set; } = new Vector3(0, 0, 0);
     public string sendText = "empty_string";
+    public bool enabled = true;
 
     private void Awake()
     {
@@ -36,7 +37,10 @@ public class ParallaxManager : MonoBehaviour
     void Start()
     {
         port = 5065;
-        InitUDP();
+        if (enabled)
+        {
+            InitUDP();
+        }
     }
 
     // Update is called once per frame
