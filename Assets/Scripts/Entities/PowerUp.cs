@@ -16,11 +16,17 @@ public class PowerUp : MonoBehaviour
     private SpriteRenderer graphic;
     private bool isUsed = false;
     public AudioClip[] sfx;
+    public GameObject onAcquireEventObject;
+    private GameEvent onAcquireEvent;
 
     // Start is called before the first frame update
     void Start()
     {
         graphic = GameObject.Find("GFX").GetComponent<SpriteRenderer>();
+        if (onAcquireEventObject != null)
+        {
+            onAcquireEvent = onAcquireEventObject.GetComponent<GameEvent>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,8 +48,12 @@ public class PowerUp : MonoBehaviour
                 AudioFxManager.instance.PlayAudioFxClip(sfx, transform);
                 isUsed = true;
                 graphic.enabled = false;
+                gameObject.transform.GetChild(2).gameObject.GetComponent<Light>().enabled = false;
+                if (onAcquireEventObject != null)
+                {
+                    onAcquireEvent.TriggerEvent();
+                }
                 StartCoroutine(WaitForParticles());
-
             }
         }
     }

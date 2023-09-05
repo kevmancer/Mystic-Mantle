@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
+    public GameObject onDeathEventObject;
+    private GameEvent onDeathEvent;
+
+    protected override void Start()
+    {
+        base.Start();
+        if (onDeathEventObject != null)
+        {
+            onDeathEvent = onDeathEventObject.GetComponent<GameEvent>();
+        }
+    }
     protected override void EntityDeath()
     {
         base.EntityDeath();
-        StartCoroutine(DestroyAfterDeath());
+        if(onDeathEventObject != null)
+        {
+            onDeathEvent.TriggerEvent();
+        }
+        else
+        {
+            StartCoroutine(DestroyAfterDeath());
+        }
     }
 
     IEnumerator DestroyAfterDeath()

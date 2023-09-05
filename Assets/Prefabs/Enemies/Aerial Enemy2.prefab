@@ -78,8 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f016cdfc47f92444ab9392200811e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preDelay: 0.5
-  duration: 0.5
+  preDelay: 0.2
+  animationPreDelay: 0
+  damageDuration: 0
   cooldown: 1.5
   isExecuting: 0
   isOnCooldown: 0
@@ -353,6 +354,7 @@ MonoBehaviour:
   attackPreOrExecuting: 0
   isAlive: 0
   animator: {fileID: 0}
+  onDeathEventObject: {fileID: 0}
 --- !u!114 &8551024745598392206
 MonoBehaviour:
   m_ObjectHideFlags: 0

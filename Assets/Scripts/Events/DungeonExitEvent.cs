@@ -2,26 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DungeonExitEvent : MonoBehaviour
+public class DungeonExitEvent : GameEvent
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void TriggerEvent()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void TriggerEvent()
-    {
+        base.TriggerEvent();
         // make everyone stop
         // shake camera
         // play rumbling sound
         // start fading screen to black/white/whatever
-        //change scene
+        GameManager.instance.LoadNextScene();
     }
 }

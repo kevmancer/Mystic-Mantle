@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RooftopEntranceEvent : MonoBehaviour
+public class RooftopEntranceEvent : GameEvent
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+        TriggerEvent();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void TriggerEvent()
     {
-        
-    }
-
-    public void TriggerEvent()
-    {
+        base.TriggerEvent();
         //make everyone stop
-        //fade screen back to normal
-        // boss drop
-        // camera bump
+        //fade white/black screen back to normal
+        // boss rise
+        // camera shake
         //boss scream??
         //continue everything
     }
