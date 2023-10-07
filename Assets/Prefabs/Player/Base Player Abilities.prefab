@@ -152,11 +152,11 @@ MonoBehaviour:
   isOnCooldown: 0
   isImmobilizing: 0
   isCancelled: 0
-  preSoundFx: []
+  preSoundFx:
+  - {fileID: 8300000, guid: 02ed77bbdced2c3469d567e4c85d9d97, type: 3}
   hitSoundFx: []
   blockSoundFx: []
-  execSoundFx:
-  - {fileID: 8300000, guid: f96c4d3bf183245429ac26f4ecb52b3e, type: 3}
+  execSoundFx: []
 --- !u!95 &8848331838423374140
 Animator:
   serializedVersion: 5
@@ -211,7 +211,7 @@ Transform:
   - {fileID: 2813576481295043013}
   - {fileID: 8999735454583263725}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4827689662633638041
 GameObject:
@@ -356,14 +356,14 @@ MonoBehaviour:
   isImmobilizing: 1
   isCancelled: 0
   preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  - {fileID: 8300000, guid: fd247b58c3eb39d408bae3bd151d0295, type: 3}
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
   blockSoundFx: []
-  execSoundFx: []
+  execSoundFx:
+  - {fileID: 8300000, guid: 925a321f1a36f5d4f93617521cce900d, type: 3}
   damage: 50
   objectsInRangeOfAttack: []
   knockBack: 10
@@ -540,16 +540,18 @@ MonoBehaviour:
   isOnCooldown: 0
   isImmobilizing: 0
   isCancelled: 0
-  preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  preSoundFx: []
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
   blockSoundFx:
-  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
-  execSoundFx: []
+  - {fileID: 8300000, guid: 86ac6e69511a29a48a15a8330d74d95d, type: 3}
+  - {fileID: 8300000, guid: 53a0bc2930f03174f89aa5a0b9d7d4b3, type: 3}
+  execSoundFx:
+  - {fileID: 8300000, guid: f8ab22bd36ce48d409ef41a490c7b51b, type: 3}
+  - {fileID: 8300000, guid: 161ec7ae7dc4dc3458c3a334498b6687, type: 3}
+  - {fileID: 8300000, guid: bdc3f2c5368eada458dc77483a454ea1, type: 3}
   damage: 10
   objectsInRangeOfAttack: []
   knockBack: 5
@@ -726,16 +728,18 @@ MonoBehaviour:
   isOnCooldown: 0
   isImmobilizing: 0
   isCancelled: 0
-  preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  preSoundFx: []
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
   blockSoundFx:
-  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
-  execSoundFx: []
+  - {fileID: 8300000, guid: 86ac6e69511a29a48a15a8330d74d95d, type: 3}
+  - {fileID: 8300000, guid: 53a0bc2930f03174f89aa5a0b9d7d4b3, type: 3}
+  execSoundFx:
+  - {fileID: 8300000, guid: 54606954c1701bd4488bb95b8d1c5eba, type: 3}
+  - {fileID: 8300000, guid: cbdd7397c20ebb14395560dc58084513, type: 3}
+  - {fileID: 8300000, guid: 4db3bbdb1392bb348b91a8629f3dd500, type: 3}
   damage: 30
   objectsInRangeOfAttack: []
   knockBack: 7

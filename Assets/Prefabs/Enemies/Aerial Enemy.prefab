@@ -114,6 +114,7 @@ MonoBehaviour:
   attackPreOrExecuting: 0
   isAlive: 0
   animator: {fileID: 0}
+  onDeathEventObject: {fileID: 0}
 --- !u!114 &5598715192051243262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,17 +181,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preDelay: 0.2
-  duration: 0.5
+  animationPreDelay: 0
+  damageDuration: 0
   cooldown: 2
   isExecuting: 0
   isOnCooldown: 0
   isImmobilizing: 1
   isCancelled: 0
-  preSoundFx: []
+  preSoundFx:
+  - {fileID: 8300000, guid: af4c3be4b7beea743b29fd1d6c3fffbe, type: 3}
   hitSoundFx: []
   blockSoundFx: []
-  execSoundFx:
-  - {fileID: 8300000, guid: 0704bab3ec387824d956ba0f286a2f6b, type: 3}
+  execSoundFx: []
   projectilePrefab: {fileID: 3990123846827125497, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
 --- !u!212 &3640478701891385911
 SpriteRenderer:

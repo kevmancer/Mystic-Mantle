@@ -776,6 +776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4486997086202019800, guid: 485c35121fd002644a2b03f1ed9b5250, type: 3}
+      propertyPath: execSoundFx.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8799762417585742455, guid: 485c35121fd002644a2b03f1ed9b5250, type: 3}
       propertyPath: m_Name
       value: Power Up Player Abilities

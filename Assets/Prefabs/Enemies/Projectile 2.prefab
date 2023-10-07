@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023478770006478095, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
       propertyPath: m_LocalScale.x
-      value: 9
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6023478770006478095, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6023478770006478095, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
       propertyPath: m_LocalScale.z
-      value: 9
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6023478770006478095, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,6 +80,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: hitSoundFx.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: blockSoundFx.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: hitSoundFx.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: hitSoundFx.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: hitSoundFx.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
+    - target: {fileID: 6405916198287174897, guid: 4ab171c22e4e24e44a4385b84dc03268, type: 3}
+      propertyPath: blockSoundFx.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 128d5e2424baff94c8de8f6785164461, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

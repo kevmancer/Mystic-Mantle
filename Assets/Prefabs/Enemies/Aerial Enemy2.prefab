@@ -87,11 +87,10 @@ MonoBehaviour:
   isImmobilizing: 1
   isCancelled: 0
   preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
+  - {fileID: 8300000, guid: af4c3be4b7beea743b29fd1d6c3fffbe, type: 3}
   hitSoundFx: []
   blockSoundFx: []
-  execSoundFx:
-  - {fileID: 8300000, guid: 0704bab3ec387824d956ba0f286a2f6b, type: 3}
+  execSoundFx: []
   projectilePrefab: {fileID: 2226072104411235753, guid: 9c0cb01cf3916934998cc58341af5cc6, type: 3}
 --- !u!212 &692536649991058759
 SpriteRenderer:
@@ -248,7 +247,7 @@ SpriteRenderer:
   m_Size: {x: 0.49882352, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5613015958088367381

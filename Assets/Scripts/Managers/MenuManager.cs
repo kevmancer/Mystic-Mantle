@@ -54,6 +54,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
+            MusicManager.instance.UpdateIndex(GameManager.instance.gameData.currentLevel, null);
             SceneManager.LoadScene(GameManager.instance.gameData.currentLevel);
         }
     }
@@ -61,6 +62,7 @@ public class MenuManager : MonoBehaviour
     public void OnNewGame()
     {
         GameManager.instance.ResetGameData();
+        MusicManager.instance.UpdateIndex(GameManager.instance.gameData.currentLevel, null);
         SceneManager.LoadScene(GameManager.instance.gameData.currentLevel);
     }
 

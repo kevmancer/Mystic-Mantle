@@ -108,16 +108,16 @@ MonoBehaviour:
   isImmobilizing: 1
   isCancelled: 0
   preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  - {fileID: 8300000, guid: b917af2cca79a194bb9a4ed3ba9d69fd, type: 3}
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
   blockSoundFx:
-  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
-  execSoundFx: []
-  damage: 110
+  - {fileID: 8300000, guid: 128d5e2424baff94c8de8f6785164461, type: 3}
+  execSoundFx:
+  - {fileID: 8300000, guid: 8bc1cd67d2b167f4385d5a9bd0dade11, type: 3}
+  damage: 300
   objectsInRangeOfAttack: []
   knockBack: 25
 --- !u!95 &6481391907631116650
@@ -413,8 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f93d9e1aefb7f0418cb4d3c41ea05d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  currentHealth: 300
+  maxHealth: 600
+  currentHealth: 600
   damageReduction: 0
   attackPreOrExecuting: 0
   isAlive: 0
@@ -624,12 +624,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2006953259, guid: 1a68ad73f96e74241aeb75d4b87fdea0, type: 3}
+  m_Sprite: {fileID: 1773440267, guid: d454d22d78ca1284a842db80bf2f2060, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.49882352, y: 1}
+  m_Size: {x: 0.64, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -809,16 +809,17 @@ MonoBehaviour:
   isImmobilizing: 1
   isCancelled: 0
   preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  - {fileID: 8300000, guid: 26557c9b42d937a429964daf4dc3fe12, type: 3}
+  - {fileID: 8300000, guid: 7a335a1f5b7adc343bbc6ba8cbfdf13b, type: 3}
+  - {fileID: 8300000, guid: d2e6ae355a29c18418fcd271bd2297a4, type: 3}
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
   blockSoundFx:
-  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
+  - {fileID: 8300000, guid: 128d5e2424baff94c8de8f6785164461, type: 3}
   execSoundFx: []
-  damage: 50
+  damage: 100
   objectsInRangeOfAttack: []
   knockBack: 15
 --- !u!95 &7013062690413509400
@@ -1080,16 +1081,16 @@ MonoBehaviour:
   isImmobilizing: 1
   isCancelled: 0
   preSoundFx:
-  - {fileID: 8300000, guid: bd03c1711144e6343b1c504ba3618bf8, type: 3}
-  - {fileID: 8300000, guid: 3feaad027b0d6d7469401bc8bb4c1d34, type: 3}
+  - {fileID: 8300000, guid: 46e40f58ee3fded4c9668a50b9e445cf, type: 3}
   hitSoundFx:
-  - {fileID: 8300000, guid: 72bd3d1a473663d4bbe29225d90984a1, type: 3}
-  - {fileID: 8300000, guid: 73a81b473ad7f6d48be06c0abe9c0b99, type: 3}
-  - {fileID: 8300000, guid: e9b4a14b5ac1fc3478de32213cd9617f, type: 3}
+  - {fileID: 8300000, guid: f44c73039c76a9d46ac4f1ada01947c0, type: 3}
+  - {fileID: 8300000, guid: 998509b3fcb06d84a9b7a1f3917e1928, type: 3}
+  - {fileID: 8300000, guid: 6d8d290a43bbd8f418af2b07b244186b, type: 3}
   blockSoundFx:
-  - {fileID: 8300000, guid: bd0a128e82dd3c34f86250b0fed49b3e, type: 3}
-  execSoundFx: []
-  damage: 80
+  - {fileID: 8300000, guid: 128d5e2424baff94c8de8f6785164461, type: 3}
+  execSoundFx:
+  - {fileID: 8300000, guid: f67ce2b156630c04d967e3aa6eb5cd26, type: 3}
+  damage: 200
   objectsInRangeOfAttack: []
   knockBack: 20
 --- !u!95 &8688759589415089353

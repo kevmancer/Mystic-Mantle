@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioFxManager : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class AudioFxManager : MonoBehaviour
             int rand = Random.Range(0, audioClips.Length);
             AudioSource audioSource = Instantiate(audioFxObject, spawnTransform.position, Quaternion.identity);
             audioSource.clip = audioClips[rand];
-            audioSource.volume = GameManager.instance.settingsData.audioFx;
             audioSource.Play();
             float clipLength = audioSource.clip.length;
             Destroy(audioSource.gameObject, clipLength);

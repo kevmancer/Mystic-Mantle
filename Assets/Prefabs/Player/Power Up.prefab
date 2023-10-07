@@ -58,7 +58,7 @@ MonoBehaviour:
   bossPrefab: {fileID: 0}
   particle: {fileID: 6442307091592798302}
   sfx:
-  - {fileID: 8300000, guid: f96c4d3bf183245429ac26f4ecb52b3e, type: 3}
+  - {fileID: 8300000, guid: 9bcf0dfcb31c3a34895a8a159196ae6c, type: 3}
   onAcquireEventObject: {fileID: 0}
 --- !u!61 &2783973601669381485
 BoxCollider2D:

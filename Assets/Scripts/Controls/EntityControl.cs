@@ -50,7 +50,7 @@ public class EntityControl : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (!disableMovement)
+        if (!disableMovement&&!GameManager.instance.stopAllMovement)
         {
             if (!moveLeft && !moveRight)
             {
@@ -96,7 +96,7 @@ public class EntityControl : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (entity.isAlive)
+        if (entity.isAlive&&!GameManager.instance.stopAllMovement)
         {
             MovementUpdate();
         }

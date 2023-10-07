@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public SettingsData settingsData { get; private set; }
     public GameObject menu;
     public bool gamePaused=false;
+    public bool stopAllMovement = false;
 
     private void Awake()
     {
@@ -55,13 +56,22 @@ public class GameManager : MonoBehaviour
     public void LoadLastSave()
     {
         SceneManager.LoadScene(gameData.currentLevel);
+        MusicManager.instance.UpdateIndex(gameData.currentLevel, null);
     }
 
     public void LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentScene+1);
-        SaveGameData(currentScene + 1);
+        currentScene++;
+        int levelScene = currentScene;
+        if (currentScene == 4)
+        {
+            currentScene = 0;
+            levelScene = 3;
+        }
+        MusicManager.instance.UpdateIndex(currentScene, null);
+        SceneManager.LoadScene(currentScene);
+        SaveGameData(levelScene);
     }
 
     public void SaveSettings(SettingsData settings)

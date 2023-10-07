@@ -13,7 +13,7 @@ public class PowerUp : MonoBehaviour
     public bool spawnsBoss=false;
     public GameObject bossPrefab;
     public ParticleSystem particle;
-    private SpriteRenderer graphic;
+    private GameObject graphic;
     private bool isUsed = false;
     public AudioClip[] sfx;
     public GameObject onAcquireEventObject;
@@ -22,7 +22,7 @@ public class PowerUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        graphic = GameObject.Find("GFX").GetComponent<SpriteRenderer>();
+        graphic = GameObject.Find("GFX").gameObject;
         if (onAcquireEventObject != null)
         {
             onAcquireEvent = onAcquireEventObject.GetComponent<GameEvent>();
@@ -47,7 +47,7 @@ public class PowerUp : MonoBehaviour
                 particle.Play();
                 AudioFxManager.instance.PlayAudioFxClip(sfx, transform);
                 isUsed = true;
-                graphic.enabled = false;
+                graphic.SetActive(false);
                 gameObject.transform.GetChild(2).gameObject.GetComponent<Light>().enabled = false;
                 if (onAcquireEventObject != null)
                 {
@@ -55,6 +55,10 @@ public class PowerUp : MonoBehaviour
                 }
                 StartCoroutine(WaitForParticles());
             }
+        }else if (isUsed)
+        {
+            graphic.SetActive(false);
+            gameObject.transform.GetChild(2).gameObject.GetComponent<Light>().enabled = false;
         }
     }
 
