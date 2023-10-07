@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource[] gameMusicSources;
     public AudioSource menuMusicSource;
     public int songIndex=0, nextIndex = 0;
-    private bool activeSource = false;
+    public bool activeSource = false;
     public delegate void TestDelegate();
     public TestDelegate onAfterSongFinished = null;
 
@@ -71,6 +71,10 @@ public class MusicManager : MonoBehaviour
                 songIndex = nextIndex;
                 gameMusicSources[activeSource ? 0 : 1].Play();
                 gameMusicSources[!activeSource ? 0 : 1].clip = gameMusicClips[songIndex];
+            }
+            if (menuMusicSource.isPlaying)
+            {
+                menuMusicSource.Stop();
             }
         }      
     }

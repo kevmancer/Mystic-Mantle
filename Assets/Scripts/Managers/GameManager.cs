@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
     {
         gameData.ResetGameData();
         SaveManager.SaveGameData(gameData);
+        gamePaused = false;
+        stopAllMovement = false;
     }
 
     public void CameraShake(bool isShaking)

@@ -22,7 +22,7 @@ public class PowerUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        graphic = GameObject.Find("GFX").gameObject;
+        graphic = transform.GetChild(0).gameObject;
         if (onAcquireEventObject != null)
         {
             onAcquireEvent = onAcquireEventObject.GetComponent<GameEvent>();

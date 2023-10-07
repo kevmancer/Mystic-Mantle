@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.02
   m_LinearFogStart: 17.63
   m_LinearFogEnd: 1142.2
-  m_AmbientSkyColor: {r: 0.20754719, g: 0.18503028, b: 0.19065951, a: 1}
+  m_AmbientSkyColor: {r: 0.4433962, g: 0.40784085, b: 0.41850746, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1.11
@@ -5140,7 +5140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &351015031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45422,23 +45422,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4616616306356193624, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616306356193624, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616306356193624, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616306576647320, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616306576647320, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307585430742, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_Name
@@ -45530,43 +45530,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307601698786, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307601698786, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307774071988, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307774071988, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616616307774071988, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4830740186782670209, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4830740186782670209, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4830740186782670209, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825127260572756316, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825127260572756316, guid: 1aeee04a889c91d4095a08b2458c77b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
