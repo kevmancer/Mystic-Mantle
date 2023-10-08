@@ -549,9 +549,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 86ac6e69511a29a48a15a8330d74d95d, type: 3}
   - {fileID: 8300000, guid: 53a0bc2930f03174f89aa5a0b9d7d4b3, type: 3}
   execSoundFx:
-  - {fileID: 8300000, guid: f8ab22bd36ce48d409ef41a490c7b51b, type: 3}
-  - {fileID: 8300000, guid: 161ec7ae7dc4dc3458c3a334498b6687, type: 3}
-  - {fileID: 8300000, guid: bdc3f2c5368eada458dc77483a454ea1, type: 3}
+  - {fileID: 8300000, guid: cbaf54aba78a0cb45bc4eb549e215fa7, type: 3}
+  - {fileID: 8300000, guid: a4de5d6f04e74e84eb1abb140528ab1f, type: 3}
+  - {fileID: 8300000, guid: 16b569452f4927b4d83cafa95e882739, type: 3}
   damage: 10
   objectsInRangeOfAttack: []
   knockBack: 5
@@ -737,9 +737,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 86ac6e69511a29a48a15a8330d74d95d, type: 3}
   - {fileID: 8300000, guid: 53a0bc2930f03174f89aa5a0b9d7d4b3, type: 3}
   execSoundFx:
-  - {fileID: 8300000, guid: 54606954c1701bd4488bb95b8d1c5eba, type: 3}
-  - {fileID: 8300000, guid: cbdd7397c20ebb14395560dc58084513, type: 3}
-  - {fileID: 8300000, guid: 4db3bbdb1392bb348b91a8629f3dd500, type: 3}
+  - {fileID: 8300000, guid: cbaf54aba78a0cb45bc4eb549e215fa7, type: 3}
+  - {fileID: 8300000, guid: a4de5d6f04e74e84eb1abb140528ab1f, type: 3}
+  - {fileID: 8300000, guid: 16b569452f4927b4d83cafa95e882739, type: 3}
   damage: 30
   objectsInRangeOfAttack: []
   knockBack: 7
